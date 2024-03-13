@@ -1,0 +1,30 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 52, in script call
+    call act1 from _call_act1
+  File "game/Start.rpy", line 126, in script call
+    call act1_day2
+  File "game/Start.rpy", line 400, in script
+    x "We're around ~1 to 2% done with this mod. There's so much more I want to add to this mod."
+TypeError: %d format: a number is required, not TagQuotingDict
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 52, in script call
+    call act1 from _call_act1
+  File "game/Start.rpy", line 126, in script call
+    call act1_day2
+  File "game/Start.rpy", line 400, in script
+    x "We're around ~1 to 2% done with this mod. There's so much more I want to add to this mod."
+  File "renpy/ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "renpy/exports.py", line 1362, in say
+    what = what % tag_quoting_dict
+TypeError: %d format: a number is required, not TagQuotingDict
+
+Windows-10-10.0.19041 AMD64
+Ren'Py 7.5.3.22090809
+Doki Doki LifeTimes Demo 0.2
+Mon Mar 11 22:07:34 2024

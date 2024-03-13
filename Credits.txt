@@ -1,0 +1,54 @@
+This mod was made possible by GanstaKingofSA's DDLC Mod Template 2.0: https://github.com/GanstaKingofSA/DDLCModTemplate2.0
+
+Additional resources used while creating this mod:
+
+Modding Cheat Sheet:
+https://www.reddit.com/r/DDLCMods/comments/kki25i/modding_cheat_sheet_umrepicishere777/
+
+Collection of copyright free backgrounds and sprites (from Ash_Rock):
+https://www.reddit.com/r/DDLCMods/comments/i8woj1/resource_already_coded_in_collection_of_copyright/
+
+Character / CG / Background Authors:
+u/AFewSecondsToLive
+Akame#8940
+Alex [ORG]#9077
+alykait { 𝓓𝓜 }#1259
+Astro Space#9989
+Crashpunk#0025
+Cyrke#8043
+u/DeliRoxeD
+Gorosona#8350
+greenbean01#6360
+JaxxHunter#3435
+LeoDeCraprio#4239
+Malukah Maker#2907
+Minikle and QQQnoQno (backgrounds edited by Nuxill#7870)
+noah.rpy#1267 / nsmythddyas#5245
+u/NormallyAverage
+Nuxill#7870
+POBAWsiezmna#1550
+SpringingTraps#5243
+TheMelodyofGaming#7515
+Trueloverofmonika#5084
+TsunKrAZy#2862
+(c) 安野譲 (Vanishing Point)
+WAHnika (Current)#9757
+Wheatley#3103 (backgrounds edited by Malukah Maker#2907
+yagamirai10#7046
+Kimagure After
+Uncle Mugen
+Yukito (pixiv user)
+Creative Freaks
+
+[Wallace Reborn Spritepack]
+
+Credits go to Childish-N, who made the original MC v1 sprites that
+Wallace Reborn was based on.
+
+https://childish-n.deviantart.com/art/DDLC-Protagonist-Sprite-715239172
+
+(u/BlueGodXD made the reborn version)
+
+Childish-N made the MC v2 sprites that may be potentially mentioned in this mod (at a future date).
+
+Link: https://www.deviantart.com/childish-n/art/DDLC-Protagonist-Sprite-Version-2-751332184

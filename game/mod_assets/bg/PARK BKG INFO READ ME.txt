@@ -1,0 +1,10 @@
+PARK INFO:
+
+Three park sprites (park, park_s, and park_n) can be found on Creative Freak's website here: 
+http://creativefreaks.net/?page_id=4443&lang=en
+
+These backgrounds cannot be distributed individually, but they can be used (and distributed)
+as part of a mod.
+
+They will most likely need to be scaled down to 1280 x 720 for use in a mod. This website can
+be used for that: https://www.aconvert.com/image/

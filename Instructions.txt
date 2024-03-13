@@ -1,0 +1,10 @@
+Hi! Welcome to DDLC LifeTimes.
+
+Disclaimer: This mod is not a replacement for the original game. Please play through the original game first before playing this mod.
+
+Instructions:
+1) Download DDLC from ddlc.moe
+2) Copy these mod files over to the DDLC game. (If it asks to replace files, click "yes".)
+3) Start the game using DokiDokiLifeTimes.exe instead of DDLC.exe. (This mod was made in Renpy 7.)
+
+Author's Notes: This mod is one of my first mods, so I apologise if anything seems out of place.

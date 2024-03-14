@@ -12,15 +12,15 @@ This serves as the official Github repo for Doki Doki LifeTimes, an upcoming DDL
 You’ve only seen one side of the DDLC cast. What will you do when you’re with them for their entire life? Will you make the right choices? Can you change their future, and maybe, see a whole new reality with your favorite Doki?
 
 # Plans for the mod:
+- The MC's personality changes as you are given options. Notable shift involves the American shift early into the game, triggered by using the American route.
 - Each character will have a positive, negative and date route.
 - Neutral routes are possible, where you don't date any character.
 - Comedic routes (ie: American Route, etc).
 - Wallace gets a few route here! He has a epiphany, and so he's no longer a jerk. (He also serves as the boss in the pre-lore.)
-- Each doki could be brought back into the "real world" to live with the player.
-- Alternatively, in the neutral route, the MC could bring all the dokis to the real world, albeit the MC won't be able to date any of them.
+- Each doki could be brought back into the "real world" to be with the MC. The other Dokis will follow suit after a while.
 - Tragic routes are possible, where some of the dokis die. All tragic routes are avoidable in this mod though.
 - Marrying one of the dokis (and more!) is possible in the final release of this mod. However, that may not happen for a while.
-- There will be no harems in this mod (as in, you can't date all of the Dokis). The neutral route serves as a middle ground, where you're friends with (but don't date) all the dokis.
+- There will be no harems in this mod (as in, you can't date all of the Dokis). The neutral route serves as a middle ground, where you're friends with all the dokis.
 
 # Copyright / IP Guidelines Issues:
 - Contact CircularSpace@proton.me if there are any copyright issues in this mod, and I will try to resolve them as fast as I can. (Suggested method of communication!)

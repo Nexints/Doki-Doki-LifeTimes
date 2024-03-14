@@ -140,6 +140,7 @@ label act1_wallace:
     "She's dead... By WALLACE..."
     "I do the only thing I can."
     $ persistent.sayori_dead = 1
+    $ console_history = []
     $ run_input(input="os.delete(\"Wallace.chr\")", output="Access Denied.")
     $ run_input(input="renpy.createchr(\"Sayori\")", output="Access Denied.")
     hide screen console_screen
@@ -186,7 +187,7 @@ label act1_ripsayori:
     x "[player] heads towards the nearest park, to relax."
     scene black
     with wipeleft
-    scene park_enterance
+    scene park_entrance
     with wipeleft
     x "[player] is pretty stupid though to leave someone like that."
     mc "Wait... Why is there a narrator here?"
@@ -201,7 +202,7 @@ label act1_route2:
         mc "Ah... This place feels amazing."
         mc "I'll probably visit this place again."
         mc "Or, maybe I'll go to the library?"
-        mc "There's so many opporotunities here..."
+        mc "There's so many opportunities here..."
         mc "It feels almost limitless as to what I could do."
         mc "Even though this is just a VM, I appreciate the finer things that this VM provides."
         scene black
@@ -217,12 +218,13 @@ label act1_route2:
         x "Her name was Sayori."
         x "She was supposed to be your childhood friend..."
         x "...Since you saw Sayori die, this environment glitched out really badly."
-        x "and I popped into existance."
+        x "and I popped into existence."
         x "I'm just trying to help as a developer."
         mc "Oh, okay..."
-        x "This game must be really broken right now."
-        mc "Wait, I thought this was just a VM? This is a game???"
-        x "Yeah... I thought so too."
+        x "This game mod must be really broken right now."
+        mc "Wait, I thought this was just a VM? This is a game?"
+        mc "And just a game mod at that?"
+        x "Yeah... I thought so too. But, it's our reality."
         mc "Ah. Welp, I'll be heading home now..."
         x "Alright. Go ahead, I'm not stopping you. I'm just the narrator."
     stop music fadeout 0.5
@@ -453,15 +455,18 @@ label act1_day2:
         hide screen console_screen
         call act1_day2_sayo from _call_act1_day2_sayo
     else:
-        "Other Doki's."
-        mc "Wait... This VM has every single character fall in love with [mc]."
-        mc "This isn't how it's meant to be."
-        mc "Let's fix this up."
-        $ console_history = []
-        $ run_input(input="ddlc.settings.harem = False", output="Command processed.")
-        mc "Okay. This should make things better."
-        hide screen console_screen
-        call act1_day2_school from _call_act1_day2_school_2
+        if persistent.sayori_dead == 1:
+            "The Epiphany."
+            call act1_day2_nosayo
+        else:
+            mc "Wait... This VM has every single character fall in love with [mc]."
+            mc "This isn't how it's meant to be."
+            mc "Let's fix this up."
+            $ console_history = []
+            $ run_input(input="ddlc.settings.harem = False", output="Command processed.")
+            mc "Okay. This should make things better."
+            hide screen console_screen
+            call act1_day2_nosayo
         x "This is a demo version. See you in the full release!"
         x "We're around ~2\% done with this mod. There's so much more I want to add to this mod."
     return
@@ -679,7 +684,7 @@ label act1_day2_sayoroute:
     "I should probably get going quickly then."
     scene black
     with wipeleft
-    scene school_sunset
+    scene school
     with wipeleft
     mc "I'm here!"
     show sayori 1r zorder 2 at f11:
@@ -763,9 +768,11 @@ label act1_day2_nosayo:
             "Do I forgive Wallace for what he did?"
             "Yes":
                 w "Thank you."
+                $ console_history = []
                 $ run_input(input="renpy.addPermission(\"Wallace\")", output="Added Permissions for Wallace.")
                 $ run_input(input="renpy.createchr(\"Sayori\")", output="Created Sayori.")
                 $ run_input(input="renpy.debug(\"*.*\")", output="Fixed all bugs.")
+                hide screen console_screen
                 w "I'm going to try setting the variables properly again."
                 w "Did you approach Sayori?"
                 menu:
@@ -775,7 +782,7 @@ label act1_day2_nosayo:
                         w "Alright."
                         w "Final question: Did you become American?"
                         menu:
-                            "Did I turn into an american?"
+                            "Did I turn into an American?"
                             "Yes":
                                 $ persistent.america = 1
                                 w "Alright."
@@ -790,7 +797,7 @@ label act1_day2_nosayo:
                         w "Alright."
                         w "I'll send you off."
                         call act1_day2_school from _call_act1_day2_school
-            "No (Not Done)":
+            "No":
                 w "I'm no longer able to change anything..."
                 w "You're ending the VM as I speak, and potentially the real world too."
                 w "I hope you're happy with this outcome."
@@ -818,6 +825,7 @@ label act1_day2_school:
     with wipeleft
     play music t5
     scene bg kitchen
+    with wipeleft
     mc "That was a great breakfast!"
     mc "I'll head off to school now, to see what other things will happen."
     scene black

@@ -29,4 +29,4 @@ You’ve only seen one side of the DDLC cast. What will you do when you’re wit
 # Additional notes:
 - I've open sourced this project and released what I had in order to show that mod development is ongoing. This mod is not ready for public release, and still uses plenty of placeholders.
 - I may eventually drop development on this mod, and if I do so, you may fork this project and continue it yourself.
-- Contact me if you would like to join the development team!
+- Contact me if you would like to join the development team! Currently looking for artists and writers to help with mod progression.

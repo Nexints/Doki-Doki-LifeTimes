@@ -38,5 +38,5 @@ You’ve only seen one side of the DDLC cast. What will you do when you’re wit
 - *I may eventually drop development on this mod, and if I do so, you may fork this project and continue it yourself.*
 
 # Credits (Additional credits in credits.txt)
-- Some ideas inspired from Doki Doki True World and other route-based mods.
+- Some ideas inspired from Doki Doki True World, Doki Doki Thot Club, and others.
 - uiGalaxy helped with humorous route ideas! (American Route, Breaking Kneecaps, etc)

@@ -15,6 +15,10 @@ label act2_day1_sayo:
     mc "Welp, time to get prepared..."
     scene black
     with wipeleft
+    "I reminisce about the past year."
+    "I met Sayori, learnt more about her, and started hanging out with her almost every day since then."
+    "Sometimes she can get a little tiresome, but overall I enjoyed the experience!"
+    "I still have food to prepare though... Those thoughts will be preserved for later."
     scene bg kitchen
     with wipeleft
     mc "I know Sayori would want my lunch, so I'll prepare two just in case."
@@ -61,7 +65,7 @@ label act2_day1_sayo:
     s "Sure!"
     "*[player] speeds off into the distance*"
     show sayori 4m zorder 1 at f11:
-        yalign 0.8
+        yalign 0.7
     s "Uwoa--"
     show sayori 1l zorder 1 at f11:
         yalign 0.7
@@ -239,6 +243,12 @@ label act2_day1_sayo:
     mc "Welp, time to focus in class..."
     scene black
     with wipeleft
-    x "This is a demo version. See you in the full release!"
+    "But I can't focus in class."
+    "I've been trying to concentrate, but all I could think about was the past year."
+    "So much has happened, and I've learnt that Sayori and Monika (her friend) were going to start a Literature club soon!"
+    "Maybe in the next year or so, but I've been trying to help them with setting up!"
+    "I did notice that Sayori acted strangely over the past few days though... Is something up?"
+    "I'll have to ask her about it."
+    x "This is where the demo for Doki Doki LifeTimes ends."
     x "We're around ~2\% done with this mod. There's so much more I want to add to this mod."
     return

@@ -486,12 +486,12 @@ label act1_day2_america:
     with wipeleft
     scene school
     with wipeleft
-    $ m_name = "Girl 1"
     play music t7
     mc "It's time to die."
     show monika 1q zorder 2 at t11:
         yalign 0.6
-    m "I'm screwed..."
+    "Girl 1" "I'm screwed..."
+    x "(Context: Monika's sprite is used as a placeholder. It's heavily contradicted, as seen in Act 2.)"
     show monika zorder 1 at thide:
         yalign 0.6
     hide monika
@@ -826,5 +826,5 @@ label act1_day2_school:
             mc "I have to skip class though... I hope the teacher doesn't mind."
     scene black
     with wipeleft
-    "This is where the demo ends. We're around 1-2% done with the mod, so sit tight as the mod develops further!"
+    "This is where the demo ends. We're around 1-2\% done with the mod, so sit tight as the mod develops further!"
     return

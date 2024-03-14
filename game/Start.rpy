@@ -826,5 +826,5 @@ label act1_day2_school:
             mc "I have to skip class though... I hope the teacher doesn't mind."
     scene black
     with wipeleft
-    "This scene isn't finished. It'll be finished soon though!"
+    "This is where the demo ends. We're around 1-2% done with the mod, so sit tight as the mod develops further!"
     return

@@ -9,7 +9,7 @@ This serves as the official Github repo for Doki Doki LifeTimes, an upcoming DDL
 
 # Jist:
 
-You’ve only seen one side of the DDLC cast. What will you do when you’re with them for their entire life? Will you make the right choices? Can you change their future, and maybe, see a whole new reality with your favorite Doki?
+You’ve only seen one side of the DDLC cast. What will you do when you’re with them for their entire life? Will you make the right choices? Can you change their future, and maybe, see a whole new reality with your favorite Doki? This mod promises to bring the Dokis into multiple fleshed out arcs, with each Doki having a lifetime to last!
 
 # Plans for the mod:
 - The MC's personality changes as you are given options. Notable shift involves the American shift early into the game, triggered by using the American route.

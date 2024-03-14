@@ -21,6 +21,7 @@ You’ve only seen one side of the DDLC cast. What will you do when you’re wit
 - Tragic routes are possible, where some of the dokis die. All tragic routes are avoidable in this mod though.
 - Marrying one of the dokis (and more!) is possible in the final release of this mod. However, that may not happen for a while.
 - There will be no harems in this mod (as in, you can't date all of the Dokis). The neutral route serves as a middle ground, where you're friends with all the dokis.
+- As the mod runs in VM3 (simulation), you're able to see other POV's and understand each of the characters from their own perspectives.
 
 # Copyright / IP Guidelines Issues:
 - Contact CircularSpace@proton.me if there are any copyright issues in this mod, and I will try to resolve them as fast as I can. (Suggested method of communication!)

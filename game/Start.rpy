@@ -279,7 +279,8 @@ label act1_sayori:
     play music t7
     "Girl 1" "\"Who's this [player]?\""
     mc "I'll go have a talk with them."
-    show sayori 4bq zorder 2 at f11
+    show sayori 4bq zorder 2 at f11:
+        yalign 0.6
     s "Okay!"
     stop music fadeout 0.5
     scene black
@@ -436,6 +437,7 @@ label act1_day2:
         mc "Wait... This VM has every single character fall in love with [mc]."
         mc "This isn't how it's meant to be."
         mc "Let's fix this up."
+        $ console_history = []
         $ run_input(input="ddlc.settings.harem = False", output="Command processed.")
         mc "Okay. This should make things better."
         hide screen console_screen
@@ -445,6 +447,7 @@ label act1_day2:
         mc "Wait... This VM has every single character fall in love with [mc]."
         mc "This isn't how it's meant to be."
         mc "Let's fix this up."
+        $ console_history = []
         $ run_input(input="ddlc.settings.harem = False", output="Command processed.")
         mc "Okay. This should make things better."
         hide screen console_screen
@@ -454,10 +457,11 @@ label act1_day2:
         mc "Wait... This VM has every single character fall in love with [mc]."
         mc "This isn't how it's meant to be."
         mc "Let's fix this up."
+        $ console_history = []
         $ run_input(input="ddlc.settings.harem = False", output="Command processed.")
         mc "Okay. This should make things better."
         hide screen console_screen
-        call act1_day2_school
+        call act1_day2_school from _call_act1_day2_school_2
         x "This is a demo version. See you in the full release!"
         x "We're around ~2\% done with this mod. There's so much more I want to add to this mod."
     return
@@ -593,7 +597,7 @@ label act1_day2_sayo:
     with dissolve_scene_full
     "It's a brand new day..."
     s "Hey MC!"
-    mc "Hey! Isee you through the window there..."
+    mc "Hey! I see you through the window there..."
     s "No fair... I thought you wouldn't see me."
     mc "Was I that dense before?"
     s "What do you mean? We've just met..."
@@ -687,10 +691,11 @@ label act1_day2_sayoroute:
     show sayori 1a zorder 2 at f11:
         yalign 0.6
     s "Alright!"
-    show sayori 1a at thide
+    show sayori 1a at thide:
+        yalign 0.6
     hide sayori
     mc "Sayori's so energetic... I wish I could be like her."
-    mc "I should get going though. I need to meet Sayori outside."
+    mc "I should get going though, as I don't wanna stick behind and stay at school."
     stop music fadeout 0.5
     scene black
     with wipeleft
@@ -743,7 +748,7 @@ label act1_day2_sayoroute:
     scene black
     with dissolve_scene_full
     stop music fadeout 0.5
-    call act2_day1_sayo from _call_act2_day1_sayo
+    call sayo_route
     return
 
 label act1_day2_nosayo:
@@ -837,7 +842,7 @@ label act1_day2_school:
         "Purple haired girl (Not Done)":
             mc "I'll talk with the purple haired girl."
             mc "I have to skip class though... I hope the teacher doesn't mind."
-            call act1_day2_yuri
+            call act1_day2_yuri from _call_act1_day2_yuri
     scene black
     with wipeleft
     "This is where the demo ends. We're around 1-2\% done with the mod, so sit tight as the mod develops further!"
@@ -852,5 +857,5 @@ label act1_day2_yuri:
     mc "Hey, are you alright?"
     y "..."
     mc "It's going to be okay. I'm here for you now."
-    "This menu isn't finished."
+    "This menu (other doki routes) aren't going to be finished for a while."
     return

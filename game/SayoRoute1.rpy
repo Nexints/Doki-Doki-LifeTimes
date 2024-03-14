@@ -1,9 +1,7 @@
-# Act 2
-# Each act 2 scene with Sayori, happens 1 year after the start.
+# Sayo's Route pt 1
 
-label act2_day1_sayo:
+label sayo_route:
     "1 year later..."
-    "Act 2, Day 1"
     "Lover's Dreams"
     play music t2
     scene bg bedroom
@@ -32,7 +30,8 @@ label act2_day1_sayo:
     s "Yeah, I am... I'm just really tired."
     mc "I'll be outside soon, waiting for you..."
     mc "I'll even bring extra food for you during lunch!"
-    s "Alright, I'll be there!"
+    s "Food???"
+    s "I'll be there as soon as possible!~"
     "*Call Disconnected*"
     scene bg kitchen
     with wipeleft
@@ -145,7 +144,8 @@ label act2_day1_sayo:
     show natsuki 5g zorder 1 at t11:
         yalign 0.7
     mc "Can't win all your battles, can you?"
-    show natsuki zorder 1 at thide
+    show natsuki zorder 1 at thide:
+        yalign 0.7
     hide natsuki
     "Turning my focus for a second..."
     play music t5
@@ -238,9 +238,11 @@ label act2_day1_sayo:
     show sayori 3r zorder 1 at f11:
         yalign 0.7
     s "See you then!~"
-    show sayori at thide
+    show sayori at thide:
+        yalign 0.7
     hide sayori
     mc "Welp, time to focus in class..."
+    mc "How didn't the teacher notice what happened?"
     scene black
     with wipeleft
     "But I can't focus in class."
@@ -249,6 +251,120 @@ label act2_day1_sayo:
     "Maybe in the next year or so, but I've been trying to help them with setting up!"
     "I did notice that Sayori acted strangely over the past few days though... Is something up?"
     "I'll have to ask her about it."
+    play music t2
+    scene bg class_day
+    with wipeleft
+    mc "It's already lunch?"
+    mc "I must've dozed off for a while."
+    scene black
+    with wipeleft
+    "I go over to an isolated spot of the school..."
+    scene club_desks
+    with wipeleft
+    "This place reminds me of Sayori."
+    "Sayori told me about this good lunch spot, and occasionally we've stayed here over the times."
+    "But, I wonder if anyone's here."
+    mc "Is anyone here?"
+    show sayori 5b zorder 1 at f41:
+        yalign 0.7
+    s "No..."
+    show sayori 5b zorder 1 at t41:
+        yalign 0.7
+    mc "Ah, hi Sayori!"
+    show sayori 4m zorder 1 at f11:
+        yalign 0.7
+    s "Ehh???"
+    s "How did you find me??"
+    show sayori 4n zorder 1 at t11:
+        yalign 0.7
+    mc "Long story. Do you want a cookie?"
+    show sayori 1m zorder 1 at f11:
+        yalign 0.7
+    s "Cookies???"
+    s "You almost never ask..."
+    show sayori 3r zorder 1 at f11:
+        yalign 0.7
+    s "But sure!~"
+    show sayori 1x zorder 1 at f11:
+        yalign 0.7
+    s "I've really wanted a cookie-"
+    show sayori 1a zorder 1 at t11:
+        yalign 0.7
+    play music t7
+    mc "And now you don't get it for that trick you played."
+    show sayori 1p zorder 1 at f11:
+        yalign 0.7
+    s "Ehhh?"
+    s "You promised!!!"
+    s "Uwaa-"
+    show sayori 1p zorder 1 at t11:
+        yalign 0.7
+    play music t5
+    mc "I'm only kidding. Come on, let's go!"
+    show sayori 1x zorder 1 at f11:
+        yalign 0.7
+    s "Alright!~"
+    scene black
+    with wipeleft
+    "Sayori's really excited about this cookie..."
+    scene bg corridor
+    with wipeleft
+    mc "...and here's your cookie, Sayori!"
+    show sayori 1y zorder 1 at f11:
+        yalign 0.7
+    s "Thanks..."
+    show sayori 1y zorder 1 at t11:
+        yalign 0.7
+    mc "Is everything alright?"
+    show sayori 4y zorder 1 at f11:
+        yalign 0.7
+    s "Yeah! See?"
+    show sayori 1a zorder 1 at t11:
+        yalign 0.7
+    mc "Alright then..."
+    "I doubt Sayori's okay. I should check on her just before school leaves."
+    "Bell" "*RING!*"
+    mc "Welp, that's our queue to leave."
+    mc "Good luck in your classes!"
+    show sayori 4y zorder 1 at f11:
+        yalign 0.7
+    s "Alright, you too [player]!"
+    stop music fadeout 0.5
+    scene black
+    with wipeleft
+    "And that's another successful interaction."
+    "They still don't suspect that I'm not from their world."
+    "But, we'll have to see."
+    "We also have Sayori to worry about... She could be taking a liking towards me?"
+    play music t9
+    scene bg class_day
+    with wipeleft
+    "I've never really been good with girls though."
+    "That could be why I still don't have a girlfriend in real life."
+    play music t2
+    show sayori 4p zorder 1 at hf11:
+        yalign 0.7
+    s "[player], are you there?"
+    "Must've spaced out too long."
+    show sayori 4p zorder 1 at t11:
+        yalign 0.7
+    mc "Yeah, I must've spaced out for a while."
+    show sayori 3x zorder 1 at f11:
+        yalign 0.7
+    s "Ready to walk home together?"
+    show sayori 3a zorder 1 at t11:
+        yalign 0.7
+    mc "As ready as I can be."
+    show sayori 1r zorder 1 at f11:
+        yalign 0.7
+    s "Alright! Let's go~"
+    show sayori 1r at thide:
+        yalign 0.7
+    mc "Why do the teachers never notice me spacing out?"
+    mc "That's odd... I should probably fix that."
+    scene black
+    with wipeleft
     x "This is where the demo for Doki Doki LifeTimes ends."
-    x "We're around ~2\% done with this mod. There's so much more I want to add to this mod."
+    x "We're around ~2\% done with this mod."
+    x "There's so much more I want to add to this mod, so check out the github repository!"
     return

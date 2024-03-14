@@ -17,7 +17,9 @@ You’ve only seen one side of the DDLC cast. What will you do when you’re wit
 - Make neutral routes (where you don't date any character).
 - Expand on Wallace's routes and implement more Wallace into the mod.
 - Implement Koto as a background character to give this universe more life.
+
 **Quirks:**
+
 - Tragic routes are possible, where some of the dokis die. All tragic routes are avoidable in this mod though.
 - Marrying one of the dokis (and more!) is possible in the final release of this mod. However, that may not happen for a while.
 - There will be no harems in this mod (as in, you can't date all of the Dokis at once). The neutral route serves as a middle ground, where you're friends with all the dokis.

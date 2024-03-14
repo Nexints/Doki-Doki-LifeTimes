@@ -24,7 +24,7 @@ You’ve only seen one side of the DDLC cast. What will you do when you’re wit
 - Tragic routes are possible, where some of the dokis die. All tragic routes are avoidable in this mod though, and there are good endings for each Doki!
 - Adding onto this: If a doki dies, the lifetime continues without them. The clear exceptions are humorous routes (like the American ending).
 - Marrying one of the dokis (and more!) is possible in the final release of this mod. However, that may not happen for a while.
-- There will be no harems in this mod (as in, you can't date all of the Dokis at once). The neutral route serves as a middle ground, where you're friends with all the dokis.
+- There will be no harems in this mod (as in, you can't date all of the Dokis at once). The neutral route serves as a middle ground, where you're friends with all the dokis. (Sayori is canonically monogamous in the official game.)
 - As the mod runs in VM3 (simulation), you're able to see other POV's and understand each of the characters from their own perspectives.
 
 # Copyright / IP Guidelines Issues:

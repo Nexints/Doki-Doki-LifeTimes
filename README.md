@@ -24,7 +24,8 @@ You’ve only seen one side of the DDLC cast. What will you do when you’re wit
 
 # Copyright / IP Guidelines Issues:
 - Contact CircularSpace@proton.me if there are any copyright issues in this mod, and I will try to resolve them as fast as I can. (Suggested method of communication!)
-- Alternatively, contact @Nexint on Discord to solve copyright problems.
+- Alternate E-mail: Nexint@proton.me
+- Contact @Nexint on Discord for any questions about this mod, issues, and feedback. I'll reply as soon as I can!
 
 # Additional notes:
 - I've open sourced this project and released what I had in order to show that mod development is ongoing. This mod is not ready for public release, and still uses plenty of placeholders.

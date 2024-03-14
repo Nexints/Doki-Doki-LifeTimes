@@ -2,6 +2,10 @@
 
 This serves as the official Github repo for Doki Doki LifeTimes, an upcoming DDLC mod worked on by Nexint. We're still in our early stages, so issues will be present in the mod and characters may not act like themselves. Feedback is appreciated on this actively developing mod!
 
+# Disclaimer
+- This mod does not claim to replace DDLC in any way, shape or form. This mod assumes you have played through the original game, and may contain spoilers for the original game.
+- DDLC files are required to play this mod. You may download DDLC at https://ddlc.moe/.
+
 # Jist:
 
 You’ve only seen one side of the DDLC cast. What will you do when you’re with them for their entire life? Will you make the right choices? Can you change their future, and maybe, see a whole new reality with your favorite Doki?

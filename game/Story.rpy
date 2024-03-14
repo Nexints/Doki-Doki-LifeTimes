@@ -191,6 +191,7 @@ label prologue_0:
             show wallace 2bi zorder 2 at t11
             w "I'd rather delete myself first."
             stop music fadeout 0.5
+            $ console_history = []
             $ run_input(input="delete(\"Wallace\")", output="Wallace (\"Boss\") Deleted.")
             scene office
             play music t8
@@ -266,6 +267,7 @@ label prologue_0:
     return
 
 label prologue_1:
+    $ console_history = []
     $ run_input(input="delete(\"Wallace\")", output="Wallace (\"Boss\") Deleted.")
     scene office
     play music t8

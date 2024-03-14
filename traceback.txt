@@ -1,30 +1,86 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 52, in script call
+While loading <renpy.display.im.Composite object at 0x00000000087440d0>:
+  File "game/script.rpy", line 53, in script call
     call act1 from _call_act1
-  File "game/Start.rpy", line 126, in script call
-    call act1_day2
-  File "game/Start.rpy", line 400, in script
-    x "We're around ~1 to 2% done with this mod. There's so much more I want to add to this mod."
-TypeError: %d format: a number is required, not TagQuotingDict
+  File "game/Start.rpy", line 127, in script call
+    call act1_day2 from _call_act1_day2
+  File "game/Start.rpy", line 442, in script call
+    call act1_day2_america from _call_act1_day2_america
+  File "game/Start.rpy", line 507, in script
+    f "I'm screwed..."
+IOError: Couldn't find file 'mod_assets/blond femc/k.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 52, in script call
+  File "game/script.rpy", line 53, in script call
     call act1 from _call_act1
-  File "game/Start.rpy", line 126, in script call
-    call act1_day2
-  File "game/Start.rpy", line 400, in script
-    x "We're around ~1 to 2% done with this mod. There's so much more I want to add to this mod."
+  File "game/Start.rpy", line 127, in script call
+    call act1_day2 from _call_act1_day2
+  File "game/Start.rpy", line 442, in script call
+    call act1_day2_america from _call_act1_day2_america
+  File "game/Start.rpy", line 507, in script
+    f "I'm screwed..."
   File "renpy/ast.py", line 921, in execute
     renpy.exports.say(who, what, *args, **kwargs)
-  File "renpy/exports.py", line 1362, in say
-    what = what % tag_quoting_dict
-TypeError: %d format: a number is required, not TagQuotingDict
+  File "renpy/exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "renpy/character.py", line 1266, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "renpy/character.py", line 930, in do_display
+    **display_args)
+  File "renpy/character.py", line 666, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "renpy/ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "renpy/display/core.py", line 3912, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "renpy/display/core.py", line 2605, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 495, in renpy.display.render.render_screen
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "renpy/display/layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "renpy/display/layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "renpy/display/layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "renpy/display/transform.py", line 747, in render
+    return transform_render(self, width, height, st, at)
+  File "accelerator.pyx", line 187, in renpy.display.accelerator.transform_render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "renpy/display/transform.py", line 747, in render
+    return transform_render(self, width, height, st, at)
+  File "accelerator.pyx", line 187, in renpy.display.accelerator.transform_render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "renpy/display/image.py", line 506, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "renpy/display/image.py", line 309, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "renpy/display/im.py", line 627, in render
+    return cache.get(self, render=True)
+  File "renpy/display/im.py", line 295, in get
+    surf = image.load()
+  File "renpy/display/im.py", line 846, in load
+    rv.blit(cache.get(im), pos)
+  File "renpy/display/im.py", line 295, in get
+    surf = image.load()
+  File "renpy/display/im.py", line 720, in load
+    raise e
+IOError: Couldn't find file 'mod_assets/blond femc/k.png'.
 
 Windows-10-10.0.19041 AMD64
 Ren'Py 7.5.3.22090809
-Doki Doki LifeTimes Demo 0.2
-Mon Mar 11 22:07:34 2024
+Doki Doki LifeTimes Demo 0.1.1
+Thu Mar 14 18:19:28 2024

@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/SayoRoute1.rpy", line 279: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    yalign 0.7
+    ^
+
+Ren'Py Version: Ren'Py 7.5.3.22090809
+Thu Mar 14 22:28:36 2024

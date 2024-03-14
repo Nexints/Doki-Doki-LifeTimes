@@ -135,8 +135,7 @@ init python:
     # This section declares the images to be shown in the gallery. See the
     # 'GalleryMenu' class syntax to declare a image to the gallery.
     residential = GalleryImage("bg residential_day", already_unlocked=True)
-    s1a = GalleryImage("sayori 1", sprite=True, already_unlocked=True)
-    m1a = GalleryImage("monika 1", name="Monika", artist="Satchely", sprite=True)
+    sayori = GalleryImage("s_cg4", already_unlocked=True)
 
     # Fast Sort (DO NOT REMOVE)
     galleryList = {k: galleryList[k] for k in sorted(galleryList)}

@@ -79,12 +79,8 @@ init python:
     selectedAchievement = None
     # This section declares the achievements. See the 'Achievements' class
     # syntax to declare one.
-    startup = Achievement("Welcome to DDLC!", "Thanks for accepting the TOS.",
+    startup = Achievement("Welcome to DDLC LifeTimes!", "Join the Doki Lifetimes!",
             "gui/logo.png")
-    steam = Achievement("Steam", "Steam User.",
-            "gui/logo.png")
-    lets_count = AchievementCount("Count", "1-3",
-            "gui/logo.png", max_count=3)
 
     # Fast Sort (DO NOT REMOVE)
     achievementList = {k: achievementList[k] for k in sorted(achievementList)}

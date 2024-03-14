@@ -6,6 +6,7 @@ This serves as the official Github repo for Doki Doki LifeTimes, an upcoming DDL
 - This mod does not claim to replace DDLC in any way, shape or form. This mod assumes you have played through the original game, and may contain spoilers for DDLC.
 - DDLC files are required to play this mod. You may download DDLC at https://ddlc.moe/.
 - This mod is free forever, and (currently) open source.
+- This mod was made possible with GanstaKingofSA's Doki Doki Mod Maker.
 
 # Jist:
 

@@ -1419,6 +1419,7 @@ image monika g2:
 define narrator = Character(ctc="ctc", ctc_position="fixed")
 define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define s = DynamicCharacter('s_name', image='sayori', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define f = DynamicCharacter('f_name', image='femc', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define m = DynamicCharacter('m_name', image='monika', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define n = DynamicCharacter('n_name', image='natsuki', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define y = DynamicCharacter('y_name', image='yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
@@ -1500,6 +1501,7 @@ default faint_effect = None
 # To define a default name make a character name variable like in this example:
 #   default e_name = "Eileen"
 
+default f_name = "FeMC"
 default s_name = "Sayori"
 default m_name = "Monika"
 default n_name = "Natsuki"
@@ -2314,3 +2316,5 @@ image wallace 2bm = im.Composite((960, 960), (0, 0), "mod_assets/wallace/2bl.png
 image wallace 2bn = im.Composite((960, 960), (0, 0), "mod_assets/wallace/2bl.png", (0, 0), "mod_assets/wallace/2br.png", (0, 0), "mod_assets/wallace/n.png")
 image wallace 2bo = im.Composite((960, 960), (0, 0), "mod_assets/wallace/2bl.png", (0, 0), "mod_assets/wallace/2br.png", (0, 0), "mod_assets/wallace/o.png")
 image wallace 2bp = im.Composite((960, 960), (0, 0), "mod_assets/wallace/2bl.png", (0, 0), "mod_assets/wallace/2br.png", (0, 0), "mod_assets/wallace/p.png")
+
+image femc 1k = im.Composite((960, 960), (0, 0), "mod_assets/blonde_femc/1l.png", (0, 0), "mod_assets/blonde_femc/1r.png", (0, 0), "mod_assets/blonde_femc/k.png")

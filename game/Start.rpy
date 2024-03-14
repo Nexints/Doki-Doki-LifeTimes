@@ -11,8 +11,8 @@ label act1:
     mc "Ahh, a fresh day."
     mc "Let's get ready..."
     play music t7
-    mc "Wait... I'm in VM3"
-    mc "Hmm...  This is quite strange, but let's act naturally."
+    mc "Ah, I'm in VM3."
+    mc "Let's try to act normal for now, and see what happens."
     mc "This is going to be interesting though."
     mc "Since I'm here, might as well make a light breakfast"
     scene black
@@ -99,7 +99,7 @@ label act1:
     scene bg class_day
     with wipeleft
     mc "It's time to study. I need to ensure that I look focused, and I can't disappoint my parents."
-    mc "My parents are currently on vacation in this VM"
+    mc "Now that I think of it, where were my parents?"
     mc "It's none of my business though."
     scene black
     with wipeleft
@@ -128,9 +128,9 @@ label act1:
     return
 
 label act1_wallace:
-    s "Hey! Do you want to play with me?"
-    w "No."
-    s "Why not? Ehe~"
+    s "Hey!"
+    w "Fuck off."
+    s "Did I annoy you? Ehe~"
     w "You fucking suck, you know that?"
     s "WHAT ARE YOU DOING?"
     play music td
@@ -432,18 +432,32 @@ label act1_day2:
     $ x_name = "Nexint"
     "Act 1. Day 2 (2012)."
     if persistent.america == 1:
-        "AMERICA TIME!"
+        "The America Route."
+        mc "Wait... This VM has every single character fall in love with [mc]."
+        mc "This isn't how it's meant to be."
+        mc "Let's fix this up."
+        $ run_input(input="ddlc.settings.harem = False", output="Command processed.")
+        mc "Okay. This should make things better."
+        hide screen console_screen
         call act1_day2_america from _call_act1_day2_america
     elif persistent.sayori_relation == 1:
         "Talking with Sayori."
-        mc "Oh god... This VM has every single character fall in love with [mc]"
+        mc "Wait... This VM has every single character fall in love with [mc]."
+        mc "This isn't how it's meant to be."
         mc "Let's fix this up."
-        $ run_input(input="ddlc.settings.datesim = False", output="Command processed.")
+        $ run_input(input="ddlc.settings.harem = False", output="Command processed.")
         mc "Okay. This should make things better."
         hide screen console_screen
         call act1_day2_sayo from _call_act1_day2_sayo
     else:
         "Other Doki's."
+        mc "Wait... This VM has every single character fall in love with [mc]."
+        mc "This isn't how it's meant to be."
+        mc "Let's fix this up."
+        $ run_input(input="ddlc.settings.harem = False", output="Command processed.")
+        mc "Okay. This should make things better."
+        hide screen console_screen
+        call act1_day2_school
         x "This is a demo version. See you in the full release!"
         x "We're around ~2\% done with this mod. There's so much more I want to add to this mod."
     return
@@ -488,13 +502,12 @@ label act1_day2_america:
     with wipeleft
     play music t7
     mc "It's time to die."
-    show monika 1q zorder 2 at t11:
+    show femc 1k zorder 2 at t11:
         yalign 0.6
-    "Girl 1" "I'm screwed..."
-    x "(Context: Monika's sprite is used as a placeholder. It's heavily contradicted, as seen in Act 2.)"
-    show monika zorder 1 at thide:
+    f "I'm screwed..."
+    show femc zorder 1 at thide:
         yalign 0.6
-    hide monika
+    hide femc
     stop music fadeout 0.5
     "*Bang*"
     play music t2
@@ -773,9 +786,9 @@ label act1_day2_nosayo:
                         w "I'll send you off."
                         call act1_day2_school from _call_act1_day2_school
             "No (Not Done)":
-                w "You're ending the world..."
-                w "NOOOO"
-                x "This is not the outcome I expected."
+                w "I'm no longer able to change anything..."
+                w "You're ending the VM as I speak, and potentially the real world too."
+                w "I hope you're happy with this outcome."
                 "Broken Masquerade Ending"
     else:
         call act1_day2_school from _call_act1_day2_school_1
@@ -816,15 +829,28 @@ label act1_day2_school:
     mc "And why aren't they at school?"
     menu:
         "Should I go to school, approach the pink haired girl, or approach the purple haired girl?"
-        "School":
+        "School (Not Done)":
             mc "Let's just keep going..."
-        "Pink haired girl":
+        "Pink haired girl (Not Done)":
             mc "I'll talk with the pink haired girl."
             mc "I hope the teacher doesn't mind though."
-        "Purple haired girl":
+        "Purple haired girl (Not Done)":
             mc "I'll talk with the purple haired girl."
             mc "I have to skip class though... I hope the teacher doesn't mind."
+            call act1_day2_yuri
     scene black
     with wipeleft
     "This is where the demo ends. We're around 1-2\% done with the mod, so sit tight as the mod develops further!"
+    return
+
+label act1_day2_yuri:
+    scene black
+    with wipeleft
+    play music t9
+    scene park_enterance
+    with wipeleft
+    mc "Hey, are you alright?"
+    y "..."
+    mc "It's going to be okay. I'm here for you now."
+    "This menu isn't finished."
     return

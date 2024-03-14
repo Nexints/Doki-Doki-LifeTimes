@@ -23,6 +23,7 @@ label start:
     #   $ mi_name = "Mike". 
     # Don't forget to add the character to 'definitions.rpy'!
     $ x_name = "Nexint"
+    $ f_name = "Girl 1"
     $ s_name = "???"
     $ m_name = "Girl 3"
     $ n_name = "Girl 2"

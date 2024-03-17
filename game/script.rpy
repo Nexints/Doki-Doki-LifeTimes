@@ -29,6 +29,7 @@ label start:
     $ n_name = "Girl 2"
     $ y_name = "Girl 1"
     $ w_name = "Wallace"
+    $ player = currentuser
 
     # This variable controls whether the quick menu in the textbox is enabled.
     $ quick_menu = True
@@ -51,8 +52,6 @@ label start:
     call prologue_0 from _call_prologue_0
     $ s_name = "???"
     call act1 from _call_act1
-
-    # REMOVE THIS LINE WHEN YOU HAVE MADE A STORY SCRIPT FILE AND CALLED IT HERE
 
     ## Example on calling scripts from DDLC.
     # if persistent.playthrough == 0:

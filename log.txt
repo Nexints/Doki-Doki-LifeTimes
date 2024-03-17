@@ -1,58 +1,36 @@
-Thu Mar 14 22:46:03 2024
+Sun Mar 17 19:01:39 2024
 Windows-10-10.0.19041
 Ren'Py 7.5.3.22090809
  
 
-Bootstrap to the start of init.init took 0.10s
+Bootstrap to the start of init.init took 0.09s
 Early init took 0.00s
 Loader init took 0.02s
-Loading error handling took 0.03s
-Loading script took 0.53s
-Loading save slot metadata. took 0.01s
+Loading error handling took 0.11s
+Loading script took 5.24s
+Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Faled to initialize steam: WindowsError(126, 'The specified module could not be found')
- - Init at game/mod_extras/bsod.rpy:22 took 0.59741 s.
-Running init code took 0.78s
-Loading analysis data took 0.03s
-Analyze and compile ATL took 0.05s
+ - Init at game/mod_extras/bsod.rpy:22 took 0.39395 s.
+Running init code took 0.54s
+Loading analysis data took 0.00s
+Analyze and compile ATL took 0.11s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\ADMIN\\AppData\\Roaming/RenPy/backups\\DDLCLifeTimes':
-Dump and make backups. took 0.08s
+Dump and make backups. took 0.14s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.07s
+Initial gc. took 0.06s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.38s
+Creating interface object took 0.36s
 Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
+Init translation took 0.08s
+Build styles took 0.01s
 Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.04s
-Prepare screens took 0.08s
-Save pyanalysis. took 0.07s
-Save bytecode. took 0.06s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.12s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 1050/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 546.33'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1600, 900) drawable=(1600, 900)
-Could not open 'cache/shaders.txt':
-Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
+Analyze screens took 0.05s
+Save screen analysis took 0.05s
+Prepare screens took 0.22s
+Save pyanalysis. took 0.08s
+Save bytecode. took 0.08s

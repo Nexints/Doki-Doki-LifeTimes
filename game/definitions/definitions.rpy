@@ -185,6 +185,8 @@ define audio.fall = "sfx/fall.ogg"
 image black = "#000000"
 image dark = "#000000e4"
 image darkred = "#110000c8"
+image sayopov = "#0d4662ff"
+image mcpov = "#505005ff"
 image white = "#ffffff"
 image splash = "bg/splash.png"
 image end:
@@ -1417,7 +1419,7 @@ image monika g2:
 #   define en = Character('Eileen & Nat', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
 define narrator = Character(ctc="ctc", ctc_position="fixed")
-define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define mc = DynamicCharacter('player', image='mainchar', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define s = DynamicCharacter('s_name', image='sayori', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define f = DynamicCharacter('f_name', image='femc', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define m = DynamicCharacter('m_name', image='monika', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
@@ -1426,6 +1428,9 @@ define y = DynamicCharacter('y_name', image='yuri', what_prefix='"', what_suffix
 define w = DynamicCharacter('w_name', image='wallace', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define ny = Character('Nat & Yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define x = DynamicCharacter('x_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define guy_1 = DynamicCharacter('guy1_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define guy_2 = DynamicCharacter('guy2_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define guy_3 = DynamicCharacter('guy3_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
 # This variable determines whether to allow the player to dismiss pauses.
 # By default this is set by config.developer which is normally set to false
@@ -1486,6 +1491,7 @@ default persistent.wallace_gone = 0
 default persistent.sayori_dead = 0
 default persistent.america = 0
 default persistent.sayori_relation = 0
+default persistent.lsayo = 0
 
 default in_sayori_kill = None
 default in_yuri_kill = None
@@ -1508,6 +1514,9 @@ default n_name = "Natsuki"
 default y_name = "Yuri"
 default x_name = "Nexint"
 default w_name = "Wallace"
+default guy1_name = "Dev 1"
+default guy2_name = "Dev 2"
+default guy3_name = "Dev 3"
 
 # Poem Variables
 # This section records how much each character likes your poem in-game.
@@ -2318,3 +2327,30 @@ image wallace 2bo = im.Composite((960, 960), (0, 0), "mod_assets/wallace/2bl.png
 image wallace 2bp = im.Composite((960, 960), (0, 0), "mod_assets/wallace/2bl.png", (0, 0), "mod_assets/wallace/2br.png", (0, 0), "mod_assets/wallace/p.png")
 
 image femc 1k = im.Composite((960, 960), (0, 0), "mod_assets/blonde_femc/1l.png", (0, 0), "mod_assets/blonde_femc/1r.png", (0, 0), "mod_assets/blonde_femc/k.png")
+
+image mainchar 1a = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/a.png")
+image mainchar 1b = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/b.png")
+image mainchar 1c = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/c.png")
+image mainchar 1d = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/d.png")
+image mainchar 1e = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/e.png")
+image mainchar 1f = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/f.png")
+image mainchar 1g = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/g.png")
+image mainchar 1h = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/h.png")
+image mainchar 1i = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/i.png")
+image mainchar 1j = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/j.png")
+image mainchar 1k = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/k.png")
+image mainchar 1l = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/l.png")
+image mainchar 1m = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/m.png")
+image mainchar 1n = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/n.png")
+image mainchar 1o = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/o.png")
+image mainchar 1p = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/p.png")
+image mainchar 1q = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/q.png")
+image mainchar 1r = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/r.png")
+image mainchar 1s = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/s.png")
+image mainchar 1t = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/t.png")
+image mainchar 1u = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/u.png")
+image mainchar 1v = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/v.png")
+image mainchar 1w = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/w.png")
+image mainchar 1x = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/x.png")
+image mainchar 1y = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/y.png")
+image mainchar 1z = im.Composite((960, 960), (0, 0), "mod_assets/player/1l.png", (0, 0), "mod_assets/player/1r.png", (0, 0), "mod_assets/player/z.png")

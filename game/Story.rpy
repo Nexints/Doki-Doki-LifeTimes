@@ -3,7 +3,7 @@ label prologue_0:
     stop music fadeout 0.5
     scene black
     "Act 0, Day 1 (2025)."
-    "Prologue."
+    "Prologue and Pre-lore."
     scene bg residential_day
     with dissolve_scene_full
     play music t2
@@ -55,23 +55,27 @@ label prologue_0:
     with wipeleft
     stop music fadeout 0.5
     w "This lead developer sucks."
-    mc "YOU SUCK MORE, YOU MURDERER-"
+    mc "You suck more, Wallace."
     scene black
     with wipeleft
     scene office_sunset
     with wipeleft
     play music t8
     mc "This job is super exhausting. Let's just go home."
-    "Guy 1" "\"I agree. Screw this \"Boss\" character, always making us stay after hours.\""
-    "Guy 2" "\"Same. I don't want to be here, the \"Boss\" makes things so complicated.\""
+    guy_1 "I agree. I personally despise the \"Boss\" of this project."
+    guy_2 "Same. This \"Boss\" makes things so complicated, I just wanna have fun!"
     mc "Wasn't his name \"Wallace\"?"
     mc "This \"Wallace\" kid, claiming hes the boss of the team."
     mc "I already hate him."
     mc "I'm the lead developer of VM3, promoted above him, and he still claims to be the boss."
     mc "Progress will continue."
     mc "I'll go home and continue work on VM3. You should get some rest too."
-    "Guy 1" "\"Farewell then. I wish the best for you.\""
-    "Guy 2" "\"Alright, best of luck!\""
+    $ guy1_name = "Joe (Dev 1)"
+    $ guy2_name = "Patrick (Dev 2)"
+    $ guy3_name = "Charles (Dev 3)"
+    guy_1 "Farewell. I wish all the best for you, [player]."
+    guy_2 "Alright, best of luck!"
+    guy_3 "See ya."
     scene corridor_night
     with wipeleft
     stop music fadeout 0.5
@@ -99,17 +103,19 @@ label prologue_0:
     scene office
     with dissolve_scene_half
     play music t2
-    mc "The second day of development."
-    mc "Let's start coding VM3, and start with the characters."
+    mc "It's the final day of development."
+    mc "I just have to apply a few commands, and it's done."
     stop music fadeout 0.5
     scene computers
     with wipeleft
     play music t4
-    $ consolehistory = []
+    $ console_history = []
     $ run_input(input="renpy.createchr(\"Monika\")", output="Created Monika")
     $ run_input(input="renpy.createchr(\"Natsuki\")", output="Created Natsuki.")
     $ run_input(input="renpy.createchr(\"Yuri\")", output="Created Yuri.")
     $ run_input(input="renpy.createchr(\"Sayori\")", output="Created Sayori.")
+    mc "Got the main characters of the VM."
+    mc "NPC's can be auto-generated at a later point."
     mc "Now for the backgrounds..."
     scene computers
     $ run_input(input="renpy.createbg(\"City_Park\")", output="Created Background.")
@@ -120,14 +126,15 @@ label prologue_0:
     $ run_input(input="renpy.createbg(\"Country_Side\")", output="Created Background.")
     mc "Houses too..."
     scene computers
-    $ run_input(input="renpy.createhouse(\"[player]House\")", output="Created House.")
+    $ run_input(input="renpy.createhouse(\"[persistent.playername]House\")", output="Created House.")
     $ run_input(input="renpy.createhouse(\"NatsukiHouse\")", output="Created House.")
     $ run_input(input="renpy.createhouse(\"MonikaHouse\")", output="Created House.")
     $ run_input(input="renpy.createhouse(\"SayoriHouse\")", output="Created House.")
     $ run_input(input="renpy.createhouse(\"YuriHouse\")", output="Created House.")
-    mc "I'll just quickly add this..."
+    mc "We should be done with backgrounds."
+    mc "I'll just quickly add this."
     scene computers
-    $ run_input(input="renpy.createchr(\"[player]\")", output="Created [player].")
+    $ run_input(input="renpy.createchr(\"[persistent.playername]\")", output="Created [persistent.playername].")
     mc "And remove this..."
     scene computers
     $ run_input(input="os.delete(\"Wallace.chr\")", output="Access Denied.")
@@ -141,7 +148,7 @@ label prologue_0:
     scene computers
     $ run_input(input="os.delete(\"Wallace\")", output="Deleted Wallace.chr")
     $ run_input(input="renpy.removePermission(\"Monika\")", output="Removed Permissions from Monika.")
-    $ run_input(input="renpy.addPermission(\"[player]\")", output="Added Permissions for [player].")
+    $ run_input(input="renpy.addPermission(\"[persistent.playername]\")", output="Added Permissions for [persistent.playername].")
     mc "For security sake, we should de-elevate permissions."
     scene computers
     $ run_input(input="os.resetPermission()", output="Access Permissions Reset.")
@@ -201,23 +208,26 @@ label prologue_0:
             mc "Welp... It was fun while it lasted."
     play music t5
     mc "Anyway, are you all ready to launch VM3?"
+    $ guy1_name = "Joe"
+    $ guy2_name = "Patrick"
+    $ guy3_name = "Charles"
     if persistent.wallace_gone == 0:
         show wallace 2bj zorder 2 at t11
         w "No."
         show wallace 2bi zorder 2 at t11
-        "Guy 1" "\"Launch it.\""
-        "Guy 2" "\"We're ready.\""
-        "Guy 3" "\"Let's get this research over with.\""
+        guy_1 "I'd say start the virtual machine."
+        guy_2 "We're ready!"
+        guy_3 "Just do it. I don't care."
         mc "4 against 1. You can't stop us now. Remember, I got promoted above you!"
         show wallace 2bp zorder 2 at t11
         w "Fine..."
         scene office
     else:
-        "Guy 1" "\"Go for it!\""
-        "Guy 2" "\"We've been waiting for ages, LET'S DO THIS!\""
-        "Guy 3" "\"Sure! It's nice to get it over with.\""
+        guy_1 "Feel free to go ahead."
+        guy_2 "Let's do this!"
+        guy_3 "Just get this over with."
     mc "Time to launch the VM!"
-    mc "Let's get Doki Doki LifeTimes started."
+    mc "Our entire lives have worked up to this point, so let's pray it works."
     stop music fadeout 0.5
     scene black
     with wipeleft
@@ -225,27 +235,28 @@ label prologue_0:
     with wipeleft
     play music t3
     mc "Welp, that went well!"
-    "Guy 1" "\"Sure went smoothly.\""
-    "Guy 2" "\"VM3's currently stable. Let's see what happens.\""
-    "Guy 3" "\"Hey, at least nothing bad happened!\""
+    guy_1 "VM3's currently stable. Let's see what happens."
+    guy_2 "It's amazing! I can do whatever I want now!"
+    guy_3 "Finally, all this is over."
     mc "You bet."
     if persistent.wallace_gone == 0:
-        "Guy 2" "\"Wait... Why isn't Wallace here?\""
+        guy_1 "Wait... Why isn't Wallace here?"
         mc "I'm not sure... Maybe he went home early?"
     play music t7
     mc "Wait, how are we going to connect to VM3?"
-    "Guy 1" "\"We could always use a memory dump?\""
-    "Guy 3" "\"Memory dumps aren't consistent enough.\""
-    mc "I *did* code in a [player] character... but I'm not sure."
-    "Guy 2" "\"This is bad.\""
-    "Guy 1" "\"Yeah...\""
-    "Guy 3" "\"Hey, [player]?\""
+    guy_1 "We could always use a memory dump?"
+    guy_3 "Memory dumps aren't consistent enough. Just screw it."
+    mc "I *did* code in a [persistent.playername] character... but I'm not sure."
+    guy_2 "We could use that!"
+    guy_1 "Yeah, we could."
+    guy_3 "Hey, [player]?"
     mc "Yeah?"
-    "Guy 3" "\"You might have to enter VM3.\""
-    "Guy 2" "\"We'll work out a way to get you out.\""
+    guy_3 "You're going to have to enter VM3."
+    guy_3 "I'm not asking you."
+    guy_2 "We'll work out a way to get you out, don't worry!"
     mc "Do I have a choice..."
     mc "Alright. I'll get in the VM. I just need to go home for now."
-    "Guy 1" "\"Alright, see you!\""
+    guy_1 "Alright, see you later."
     stop music fadeout 0.5
     scene corridor_night
     with wipeleft
@@ -288,7 +299,7 @@ label day3:
     with dissolve_scene_half
     play music t2
     mc "Ahh, good morning!"
-    mc "It's time to try to get into the VM."
+    mc "I'm going to try to get into the VM."
     mc "It's going to be painful, but I think I know how to."
     mc "I can use my player script that I coded in!"
     play music t7
@@ -309,13 +320,14 @@ label day3:
     mc "It's time to wait..."
     scene black
     with wipeleft
-    $ pause(0.5)
+    $ pause(1)
     scene living_room
     with wipeleft
     mc "Food's here!"
     mc "Just got some pizza, nothing much."
     scene black
     with wipeleft
+    "*nom*"
     scene living_room
     with wipeleft
     mc "That was some amazing pizza!"
@@ -327,10 +339,9 @@ label day3:
     play music t5
     scene office
     with wipeleft
-    "It's time for the third day of this job."
-    "Our objective is to get inside the VM."
-    "Let's get this started."
-    "I think I might have a way..."
+    "We're here."
+    "It's time to bring up the plan I had."
+    mc "I think I might have a way to get in."
     mc "Team, follow me..."
     stop music fadeout 0.5
     scene black
@@ -339,23 +350,23 @@ label day3:
     scene ground_floor
     with wipeleft
     if persistent.wallace_gone == 0:
-        mc "Team, you ready?"
+        mc "Team, are you sure about this?"
         show wallace 1bf zorder 2 at f11
-        w "Let's just get this over with."
+        w "Just get in, [player]. I don't care about you."
         show wallace 1bc zorder 2 at t11
-        "Guy 1" "\"Alright...\""
-        "Guy 2" "\"Just get this built man.\""
-        "Guy 3" "\"We're ready.\""
+        guy_1 "Absolutely. Might as well try."
+        guy_2 "We're sure!"
+        guy_3 "Just get this built man."
         show wallace zorder 2 at thide
         mc "Alright then."
         mc "Here's how you do it..."
     else:
-        mc "Team, you ready?"
-        "Guy 1" "\"We're ready!\""
-        "Guy 2" "\"Let's get this built.\""
-        "Guy 3" "\"Yeah, we're 100\% ready.\""
+        mc "Team, are you sure about this?"
+        guy_1 "We're sure."
+        guy_2 "Let's get this built!"
+        guy_3 "Yeah. Besides, we're forcing you in, it's not like you had a choice."
         mc "Alright then."
-        mc "Let's see..."
+        mc "Let's see how to build this..."
     stop music fadeout 0.5
     scene black
     with wipeleft
@@ -363,10 +374,13 @@ label day3:
     scene ground_floor
     with wipeleft
     mc "And that's the entire project done!"
-    "Guy 1" "\"That wasn't so complicated after all!\""
+    guy_1 "That wasn't so complicated after all."
     mc "I'll hop in now. Wish me luck!"
-    "Guy 2" "\"Good luck!\""
+    guy_2 "Good luck!"
+    $ console_history = []
+    $ run_input(input="os.merge(\"[persistent.playername]\", \"[player]\")", output="Merged [player] with [persistent.playername]")
     stop music fadeout 0.5
     scene black
     with dissolve_scene_full
+    hide screen console_screen
     return

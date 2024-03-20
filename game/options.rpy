@@ -7,14 +7,14 @@
 # This file customizes what your mod is and and how it starts and builds!
 
 # This controls what your mod is called.
-define config.name = "Doki Doki LifeTimes Demo"
+define config.name = "Doki Doki LifeTimes Alpha"
 
 # This controls whether you want your mod name to show in the main menu.
 # If your mod name is big, it is suggested to turn this off.
 define gui.show_name = True
 
 # This controls the version number of your mod.
-define config.version = "0.1.2-dev"
+define config.version = "0.2.1-RW"
 
 # This adds information about your mod in the About screen.
 # DDLC does not have a 'About' screen so you can leave this blank.
@@ -25,7 +25,7 @@ define gui.about = _("")
 # Note:
 #   The build name is ASCII only so no numbers, spaces, or semicolons.
 #   Example: Doki Doki Yuri Time to DokiDokiYuriTime
-define build.name = "DokiDokiLifeTimes"
+define build.name = "DDLT"
 
 # This configures whether your mod has sound effects.
 define config.has_sound = True
@@ -71,7 +71,7 @@ define config.window_hide_transition = Dissolve(.2)
 default preferences.text_cps = 50
 
 # This controls the auto-text forward speed of your mod.
-default preferences.afm_time = 15
+default preferences.afm_time = 10
 
 # This controls the audio level of your mod.
 default preferences.music_volume = 0.75
@@ -85,7 +85,7 @@ default preferences.sfx_volume = 0.75
 define config.save_directory = "DokiDokiLifeTimes"
 
 # This controls the window logo of your mod.
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "mod_assets/DDLCModTemplateLogo.png"
 
 # This controls whether your mod allows the player to skip dialogue.
 define config.allow_skipping = True
@@ -210,6 +210,7 @@ init python:
     build.classify('README.linux', 'linux')
     build.classify('Credits.txt','mod all')
     build.classify('Instructions.txt','mod all')
+    build.classify('PatchNotes.txt','mod all')
    
     # This sets' README.html as documentation
     build.documentation('README.html')

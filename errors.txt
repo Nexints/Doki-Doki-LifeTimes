@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/SayoRoute1.rpy", line 279: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    yalign 0.7
-    ^
+File "game/definitions/definitions.rpy", line 1473: unexpected EOF while parsing
+    persistent.
+               ^
 
 Ren'Py Version: Ren'Py 7.5.3.22090809
-Thu Mar 14 22:28:36 2024
+Mon Mar 18 22:50:11 2024

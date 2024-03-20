@@ -1,10 +1,15 @@
-# Day 1
+# Start of act 1, depending on routes.
 
 label act1:
+    $ player = persistent.playername
     $ persistent.sayori_relation = 0
     stop music fadeout 0.5
-    "Act 1. Day 1 (2012)."
-    "First encounter with Sayori!"
+    "Act 1, Day 1"
+    "The beginning of it all."
+    scene mcpov
+    $ pause(0.01)
+    scene black
+    with dissolve_cg
     play music t2
     scene bg bedroom
     with dissolve_scene_full
@@ -50,6 +55,11 @@ label act1:
     scene black
     with wipeleft
     play music t3
+    scene board
+    with wipeleft
+    mc "Ahh, so this is my schedule."
+    mc "I have history first, Science second, English third, and Math last."
+    mc "Got it... but I might skip a few courses."
     scene bg class_day
     with wipeleft
     mc "Welp, I'm not too late."
@@ -76,12 +86,12 @@ label act1:
     play music t2
     mc "I should probably have my lunch here."
     show sayori 1bu zorder 2 at t11:
-        yalign 0.6
-    mc "I noticed this blue-eyed \"cinnamon bun\" feeling down while walking to school..."
+        yalign 0.4
+    mc "I noticed this person feeling down while walking to school..."
     show sayori zorder 1 at thide:
-        yalign 0.6
+        yalign 0.4
     hide sayori
-    mc "I'm overthinking again. It *should be* nothing much, as I don't know her yet."
+    mc "but I'm overthinking again. It *should be* nothing much, as I don't know her yet."
     mc "I'll enjoy my lunch for now, and see what happens later on."
     scene black
     with wipeleft
@@ -92,6 +102,7 @@ label act1:
     mc "It seems as if my cooking skills have improved."
     "Bell" "\"RING!\""
     mc "Fine... I'll get back to class."
+    mc "I have English now... My worst subject-"
     stop music fadeout 0.5
     scene black
     with wipeleft
@@ -113,7 +124,7 @@ label act1:
     play music t2
     scene bg corridor
     with wipeleft
-    mc "School sucks... I wanna leave as soon as I can."
+    mc "Man, school sucks. I'll just get outta here."
     scene black
     with wipeleft
     scene school
@@ -140,19 +151,19 @@ label act1_wallace:
     "She's dead... By WALLACE..."
     "I do the only thing I can."
     $ persistent.sayori_dead = 1
+    $ console_history = []
     $ run_input(input="os.delete(\"Wallace.chr\")", output="Access Denied.")
     $ run_input(input="renpy.createchr(\"Sayori\")", output="Access Denied.")
-    hide screen console_screen
     "NOOOOO... Damn you, Wallace."
+    hide screen console_screen
     "Maybe I should have chosen a different path."
     call act1_ripsayori from _call_act1_ripsayori
     return
 
 label act1_nowallace:
-    s "Hey!"
-    "Girl 1" "\"Screw off\""
-    s "Did I annoy you? Ehe~"
-    "Girl 1" "\"You're just a stupid idiot!\""
+    s "Oh-"
+    s "Kyaa!-"
+    "I heard this girl tumbling over..."
     "I have a feeling this girl may be important to me."
     $ persistent.sayori_dead = 0
     menu:
@@ -160,14 +171,13 @@ label act1_nowallace:
         "Yes":
             $ persistent.sayori_relation = 1
             call act1_sayori from _call_act1_sayori
-        "No":
+        "No (Not Done)":
             $ persistent.sayori_relation = 0
             call act1_nosayori from _call_act1_nosayori
     return
 
 label act1_nosayori:
     "I decide not to approach."
-    $ x_name = "Narrator"
     mc "Welp, it's time to head home."
     mc "I guess I'll take a quick stop at the nearby park though..."
     mc "Let's see what happens."
@@ -182,17 +192,16 @@ label act1_nosayori:
 
 label act1_ripsayori:
     "Can't do anything now though..."
-    $ x_name = "Narrator"
-    x "[player] heads towards the nearest park, to relax."
+    "[player] heads towards the nearest park, to relax."
     scene black
     with wipeleft
-    scene park_enterance
+    scene park_entrance
     with wipeleft
-    x "[player] is pretty stupid though to leave someone like that."
-    mc "Wait... Why is there a narrator here?"
-    mc "I didn't code one in."
+    guy_1 "[currentuser] is pretty stupid though to leave someone like that."
+    mc "Wait... Why is Jim here?"
+    mc "I didn't code him in."
     mc "What's going on?"
-    x "I should probably explain myself..."
+    guy_1 "I should probably explain everything..."
     call act1_route2 from _call_act1_route2_1
     return
 
@@ -201,7 +210,7 @@ label act1_route2:
         mc "Ah... This place feels amazing."
         mc "I'll probably visit this place again."
         mc "Or, maybe I'll go to the library?"
-        mc "There's so many opporotunities here..."
+        mc "There's so many opportunities here..."
         mc "It feels almost limitless as to what I could do."
         mc "Even though this is just a VM, I appreciate the finer things that this VM provides."
         scene black
@@ -213,18 +222,19 @@ label act1_route2:
         mc "I don't want to be late for school tomorrow, as something big is happening then."
         mc "I need to preserve the VM state before things collapse more."
     else:
-        x "The person you saw die..."
-        x "Her name was Sayori."
-        x "She was supposed to be your childhood friend..."
-        x "...Since you saw Sayori die, this environment glitched out really badly."
-        x "and I popped into existance."
-        x "I'm just trying to help as a developer."
+        guy_1 "The person you saw die..."
+        guy_1 "Her name was Sayori."
+        guy_1 "She was supposed to be your childhood friend..."
+        guy_1 "...Since you saw Sayori die, this environment glitched out really badly."
+        guy_1 "and I popped into existence."
+        guy_1 "I'm just trying to help as a developer."
         mc "Oh, okay..."
-        x "This game must be really broken right now."
-        mc "Wait, I thought this was just a VM? This is a game???"
-        x "Yeah... I thought so too."
+        guy_1 "This game mod must be really broken right now."
+        mc "Wait, I thought this was just a VM? This is a game?"
+        mc "And just a game mod at that?"
+        guy_1 "Yeah. I thought so too. But, it's our reality."
         mc "Ah. Welp, I'll be heading home now..."
-        x "Alright. Go ahead, I'm not stopping you. I'm just the narrator."
+        guy_1 "Alright. Go ahead, I'm not stopping you."
     stop music fadeout 0.5
     scene black
     with dissolve_cg
@@ -244,7 +254,8 @@ label act1_route2:
     return
 
 label act1_sayori:
-    "I approach cautiously..."
+    "I approach cautiously."
+    "Anything could happen while I'm there."
     stop music fadeout 0.5
     scene black
     with wipeleft
@@ -252,35 +263,43 @@ label act1_sayori:
     with wipeleft
     play music t9
     show sayori 4bu zorder 2 at t11:
-        yalign 0.6
-    mc "Hey... What seems to be the issue?"
+        yalign 0.4
+    mc "Hey."
     show sayori 4bu zorder 2 at hf11:
-        yalign 0.6
-    s "I don't know what to do... This girl is calling me stupid."
+        yalign 0.4
+    s "I'm fine..."
     show sayori 4bu zorder 2 at t11:
-        yalign 0.6
-    mc "Don't worry. I'll help you."
-    mc "This girl shouldn't call people stupid for no reason."
+        yalign 0.4
+    mc "I don't think you are."
+    mc "Come on, let's get you outta here."
     show sayori 1bv zorder 2 at f11:
-        yalign 0.6
-    s "Wait, really?"
+        yalign 0.4
+    s "Alright..."
     show sayori 1bv zorder 2 at t11:
-        yalign 0.6
-    mc "Yeah. What's your name?"
+        yalign 0.4
+    mc "Yeah."
+    mc "What's your name?"
     show sayori 3by zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     $ s_name = "Sayori"
     s "Sayori."
     show sayori 3by zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     mc "Ah, I'm [player]."
     show sayori 1bn zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     play music t7
     "Girl 1" "\"Who's this [player]?\""
+    "Girl 1" "\"Why do they care so much about some idiot who fell?\""
+    mc "Give me a second."
     mc "I'll go have a talk with them."
-    show sayori 4bq zorder 2 at f11
+    show sayori 4bq zorder 2 at f11:
+        yalign 0.4
     s "Okay!"
+    show sayori 4bq zorder 2 at t11:
+        yalign 0.4
+    mc "Take this for now."
+    "I hand Sayori the extra lunch I had."
     stop music fadeout 0.5
     scene black
     with wipeleft
@@ -291,10 +310,12 @@ label act1_sayori:
         "What should I do?"
         "Talk with them":
             $ persistent.america = 0
-            "Girl 1" "\"Oh sh-\""
-            mc "Leave, and don't mess with us again. Go pick on other people, you knuckleheads."
-            mc "I know you're hiding. Don't try to hide it."
-        "L'AMERICA":
+            "Girl 1" "\"Why did you care for that idiot?\""
+            mc "You don't need to know why."
+            mc "This doesn't concern you."
+            mc "Leave."
+            "Girl 1" "\"Okay, chill man...\""
+        "L'AMERICA (Real)":
             $ persistent.america = 1
             "Girl 1" "\"OH NO HE HAS A GUN! HIDE\""
             mc "Don't try to hide! It's AMERICA TIME!"
@@ -305,28 +326,27 @@ label act1_sayori:
     scene sidewalk
     with wipeleft
     show sayori 4bt zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     if persistent.america == 0:
         "Sayori seems happy by this..."
     else:
         "Sayori seems slightly distressed... but overall decently happy."
     show sayori 1bl zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     play music t9
-    s "After that incident, I was about to go home..."
+    s "[player], thank you for helping me."
     show sayori 1bl zorder 2 at t11:
-        yalign 0.6
-    mc "I'm sorry for what happened."
-    mc "That jerk can screw themselves."
+        yalign 0.4
+    mc "I'm sorry for what happened back there"
     mc "By the way, are you doing okay?"
     show sayori 1bt zorder 2 at hf11:
-        yalign 0.6
+        yalign 0.4
     s "Yeah... I hope so, ehe~"
     show sayori 1bt zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     mc "Alright. I'll head home now."
     show sayori 1bu zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     s "Alright..."
     stop music fadeout 0.5
     scene black
@@ -335,92 +355,95 @@ label act1_sayori:
     scene bg residential_day
     with wipeleft
     show sayori 4bn zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Wait, you're still here!"
     show sayori 4bn zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     mc "Yeah. We live really close to each other!"
     show sayori 3bl zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Ehe~ I guess I'll be seeing you more often now!"
     show sayori 3bl zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     mc "Alright then."
     show sayori 1br zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Oh, also..."
     show sayori 1bq zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     play music t10
     scene black
     with dissolve_cg
     scene s_cg4
     with dissolve_cg
     s "Thank you for helping me back there."
+    "Why is this girl hugging me? I've just met them-"
+    "Might as well go along with it."
     mc "Any time."
-    s "I've... just never had someone do that for me..."
-    mc "I'll be that person you never had."
-    mc "It's been just a few hours, but I appreciate you being here."
-    s "Thank you...  [player]"
-    mc "Any time. I appreciate you for who you are."
-    s "By chance, Where do you live? I wanna see if I can spend more time with you!~"
+    s "I've... just never had someone do that for me."
+    "So that's why."
+    mc "Why not?"
+    mc "Look, people do care about you."
+    s "No one from school..."
     call act1_route1 from _call_act1_route1
     return
 
 label act1_route1:
+    stop music fadeout 0.5
     scene black
     with dissolve_cg
+    play music t2
     scene residential_sunset
     with dissolve_cg
     show sayori 1br zorder 2 at t11:
-        yalign 0.6
-    mc "Ah, I live right..."
-    show sayori 1bn zorder 2 at h11:
-        yalign 0.6
-    mc "There!"
-    play music t2
+        yalign 0.4
+    mc "Welp, I guess I'll be going to my house over there-"
+    show sayori 1bn zorder 2 at hf11:
+        yalign 0.4
+    s "Wait!"
     show sayori 1bm zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "No way! We're neighbors!!!"
     show sayori 1bm zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     mc "No need to get worked up."
     show sayori 1bl zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Ahaha~ Now I can spend more time with you!"
     show sayori 1bk zorder 2 at t11:
-        yalign 0.6
-    mc "Why don't we both get inside? It's pretty late..."
+        yalign 0.4
+    mc "Why don't we both go home though? It's pretty late..."
     show sayori 1bd zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Alright then..."
     show sayori 1bd zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     scene black
     with wipeleft
     scene house_night
     with wipeleft
     show sayori 1bk zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     mc "This is where we'll depart for now."
     mc "See you later, Sayori!"
     show sayori 4ba zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "See you later [player]!"
     show sayori zorder 1 at thide:
-        yalign 0.6
+        yalign 0.4
     hide sayori
-    "This was a nice interaction!"
+    "Welp, it's time to go."
+    "This girl is way too excited about something like this... I wonder why."
     if persistent.america == 1:
-        "Tomorrow, It's America time."
+        "But tomorrow, It's America time."
     stop music fadeout 0.5
     scene black
     with wipeleft
     play music t5
     scene bedroom_night
     with wipeleft
-    "Dang, I really need to sleep."
-    "It's been a long day, and I should probably start sleeping."
+    "Welp, let's see what tomorrow brings."
+    "I've done quite a lot today. I've helped out some person named Sayori, and I've figured out my schedule."
     scene black
     with dissolve_scene_full
     stop music fadeout 0.5
@@ -430,34 +453,44 @@ label act1_route1:
 
 label act1_day2:
     $ x_name = "Nexint"
+    $ player = currentuser
     "Act 1. Day 2 (2012)."
     if persistent.america == 1:
         "The America Route."
         mc "Wait... This VM has every single character fall in love with [mc]."
         mc "This isn't how it's meant to be."
         mc "Let's fix this up."
+        $ console_history = []
         $ run_input(input="ddlc.settings.harem = False", output="Command processed.")
         mc "Okay. This should make things better."
         hide screen console_screen
+        $ player = persistent.playername
         call act1_day2_america from _call_act1_day2_america
     elif persistent.sayori_relation == 1:
         "Talking with Sayori."
         mc "Wait... This VM has every single character fall in love with [mc]."
         mc "This isn't how it's meant to be."
         mc "Let's fix this up."
+        $ console_history = []
         $ run_input(input="ddlc.settings.harem = False", output="Command processed.")
         mc "Okay. This should make things better."
+        $ player = persistent.playername
         hide screen console_screen
         call act1_day2_sayo from _call_act1_day2_sayo
     else:
-        "Other Doki's."
-        mc "Wait... This VM has every single character fall in love with [mc]."
-        mc "This isn't how it's meant to be."
-        mc "Let's fix this up."
-        $ run_input(input="ddlc.settings.harem = False", output="Command processed.")
-        mc "Okay. This should make things better."
-        hide screen console_screen
-        call act1_day2_school
+        if persistent.sayori_dead == 1:
+            "The Epiphany."
+            call act1_day2_nosayo from _call_act1_day2_nosayo
+        else:
+            mc "Wait... This VM has every single character fall in love with [mc]."
+            mc "This isn't how it's meant to be."
+            mc "Let's fix this up."
+            $ console_history = []
+            $ run_input(input="ddlc.settings.harem = False", output="Command processed.")
+            mc "Okay. This should make things better."
+            $ player = persistent.playername
+            hide screen console_screen
+            call act1_day2_nosayo from _call_act1_day2_nosayo_1
         x "This is a demo version. See you in the full release!"
         x "We're around ~2\% done with this mod. There's so much more I want to add to this mod."
     return
@@ -478,35 +511,34 @@ label act1_day2_america:
     s "Wait up!"
     mc "I have to use this M-16 though."
     show sayori 1p zorder 2 at hf11:
-        yalign 0.6
+        yalign 0.4
     s "Hey [player]!"
     show sayori 1p zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     mc "IT'S AMERICA TIME!"
     show sayori 1n zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Ooo, what is it?"
     show sayori 1n zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     "*[player] fires gunshots everywhere*"
     show sayori 4r zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Can I try too?"
     show sayori 4q zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     mc "Sure!"
     mc "I'll just quickly..."
     scene black
     with wipeleft
-    scene school
     with wipeleft
     play music t7
     mc "It's time to die."
     show femc 1k zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     f "I'm screwed..."
     show femc zorder 1 at thide:
-        yalign 0.6
+        yalign 0.4
     hide femc
     stop music fadeout 0.5
     "*Bang*"
@@ -519,31 +551,31 @@ label act1_day2_america:
     with wipeleft
     mc "I'm back!"
     show sayori 4r zorder 2 at hf11:
-        yalign 0.6
+        yalign 0.4
     s "Thanks for dealing with them!"
     show sayori 1d zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Mind if I join you?"
     show sayori 1d zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     menu:
         "Should I let Sayori join me?"
         "Yes":
-            mc "Sure! I don't mind..."
+            mc "I don't mind."
             show sayori 1r zorder 2 at f11:
-                yalign 0.6
+                yalign 0.4
             s "Ehe~"
             show sayori 4a zorder 2 at f11:
-                yalign 0.6
+                yalign 0.4
             s "Things are going to be great!"
             call act1_day2_sayoriamerica from _call_act1_day2_sayoriamerica
         "No":
             mc "I'd rather not..."
             show sayori 1x zorder 2 at f11:
-                yalign 0.6
+                yalign 0.4
             s "That's alright. Thanks anyway for dealing with her!"
             show sayori 1a zorder 2 at t11:
-                yalign 0.6
+                yalign 0.4
             mc "No problem."
             scene black
             with wipeleft
@@ -564,25 +596,25 @@ label act1_day2_sayoriamerica:
     with wipeleft
     play music t2
     show sayori 3x zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Hey, [player]?"
     show sayori 1a zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     mc "Yeah?"
     show sayori 1x zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "I just wanted to say..."
     show sayori 4m zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Oops!"
     show sayori 4m zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     "This ended up in Sayori accidentally shooting a window."
     show sayori 4n zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     mc "Should've known you would do this..."
     show sayori 5d zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "I'm just clumsy like that... Hmph."
     "And as such, [player] lives the all american dream with Sayori, shooting people with his M-16"
     return
@@ -593,31 +625,31 @@ label act1_day2_sayo:
     with dissolve_scene_full
     "It's a brand new day..."
     s "Hey MC!"
-    mc "Hey! Isee you through the window there..."
+    "Sayori's up already? Might as well suprise her."
+    mc "I see you, Sayori."
     s "No fair... I thought you wouldn't see me."
-    mc "Was I that dense before?"
-    s "What do you mean? We've just met..."
-    "Almost accidentally blew my cover there."
     mc "Wait, we're going to be late!"
-    mc "I'll head to school now, see you soon!"
+    mc "I'll head off to school now."
+    s "Wait!-"
+    "But I don't hear Sayori."
     scene black
     with wipeleft
     scene bg kitchen
     with wipeleft
-    "Packing a lunch just in case."
-    "I'm hungry..."
+    "I'm going to pack a lunch to school, since I don't have time."
+    "I'm hungry, and I'm going to be late..."
     scene black
     with wipeleft
     scene bg house
     with wipeleft
     show sayori 4p zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Wait!"
     show sayori 1l zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "We go to the same school, do you wanna walk together?"
     show sayori 1k zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     mc "Alright then, but we gotta walk quickly..."
     stop music fadeout 0.5
     scene black
@@ -625,13 +657,20 @@ label act1_day2_sayo:
     menu:
         "Did you grow apart from Sayori?"
         "Yes (Not done)":
-            "This menu is still in progress."
+            $ persistent.lsayo = 1
+            call act1_day2_sayoroute
         "No":
+            $ persistent.lsayo = 0
             call act1_day2_sayoroute from _call_act1_day2_sayoroute
     return
 
 label act1_day2_sayoroute:
-    "Alright. Let's see how this goes."
+    if persistent.lsayo == 1:
+        "She's getting way too clingy, too fast."
+        "I'll try to ignore Sayo after tomorrow. For now, I'll just go with it."
+    else:
+        "Sayori's a little clingy towards me for some reason, but might as well hang out with her."
+        "Besides, I'm lonely myself as well. Might as well have a new friend while I'm at it!"
     play music t2
     scene bg corridor
     with wipeleft
@@ -639,27 +678,27 @@ label act1_day2_sayoroute:
     mc "Thank goodness I packed my lunch, I'm starving!"
     s "Did you say... lunch??"
     show sayori 1p zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     "I must've talked too loudly..."
     show sayori 1p zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Found you!"
     show sayori 1p zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     mc "Fine... you win. I'm starving though, do you want to split my lunch?"
     mc "And why are you taking my lunch?"
     show sayori 5b zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "I'm hungry..."
     show sayori 5b zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     mc "I'll split my lunch with you."
     mc "Just don't take everything..."
     show sayori 3a zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Alright!"
     show sayori 1a zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     stop music fadeout 0.5
     scene black
     with wipeleft
@@ -675,22 +714,30 @@ label act1_day2_sayoroute:
     "I should probably get going quickly then."
     scene black
     with wipeleft
-    scene school_sunset
+    scene school
     with wipeleft
     mc "I'm here!"
     show sayori 1r zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Ready?"
     show sayori 1q zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     mc "Let's get outta here. I wouldn't want to waste time without you!"
     show sayori 1a zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Alright!"
-    show sayori 1a at thide
+    show sayori 1a at thide:
+        yalign 0.4
     hide sayori
-    mc "Sayori's so energetic... I wish I could be like her."
-    mc "I should get going though. I need to meet Sayori outside."
+    if persistent.lsayo == 0:
+        mc "Sayori's so energetic... I wish I could be like her."
+    else:
+        "This gives me a tiny bit of time to think."
+        "Sayori wants to hang out with me a little too often."
+        "I'm not sure why though, and to be frank, I don't really care."
+    mc "I should get going though, as I don't wanna stick behind and stay at school."
+    if persistent.lsayo == 1:
+        mc "Plus, Sayori is waiting for me."
     stop music fadeout 0.5
     scene black
     with wipeleft
@@ -701,55 +748,68 @@ label act1_day2_sayoroute:
     "I never knew this world could render things like these."
     "It's almost as if... this world is my lifetime."
     show sayori 1h zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Hey, [player]?"
     show sayori 1e zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     mc "Yeah?"
     show sayori 1l zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "I just wanted to know... did you mean what you said earlier?"
     show sayori 1m zorder 2 at t11:
-        yalign 0.6
-    mc "I did. I enjoy spending time with you Sayo, and I wouldn't trade the world for it."
+        yalign 0.4
+    if persistent.lsayo == 1:
+        "I might have to lie a lot here..."
+        "But, might as well go along with it."
+        "I still don't want to hurt Sayori's feelings."
+        mc "I did. I meant what I said."
+    else:
+        mc "I did. I enjoy spending time with you Sayo, and I wouldn't trade the world for it."
     show sayori 1y zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "It's just... I've never had someone else say that to me."
     show sayori 1u zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Everyone else has always used me... ehe~"
     show sayori 1u zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     mc "It's going to be alright."
     mc "I won't use you like those jerks who did."
+    if persistent.lsayo == 1:
+        "I still won't use Sayori, but I do want to distance myself a bit."
     mc "Everything's going to be fine..."
     show sayori 1t zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Thank you, [player] for being there with me."
     show sayori 1t zorder 2 at t11:
-        yalign 0.6
+        yalign 0.4
     mc "Anything for you, Sayori."
     mc "Wait, why weren't you at school yesterday?"
     show sayori 1l zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "I didn't feel like going yesterday..."
     show sayori 1x zorder 2 at f11:
-        yalign 0.6
+        yalign 0.4
     s "Besides, I'm feeling much better now that you're here!"
     show sayori 1a zorder 2 at f11:
-        yalign 0.6
-    mc "Ah, makes sense."
-    "This girl is starting to get really clingy towards me... It's only been a few days though."
+        yalign 0.4
+    if persistent.lsayo == 0:
+        mc "If it makes you feel that way, I'll be there for you."
+    else:
+        mc "I'll try to be there for you, but no guarantees."
+        "That's a blatant lie."
+        "However, this girl is starting to get really clingy towards me."
+        "It's only been a few days, so I don't understand why."
     scene black
     with dissolve_scene_full
     stop music fadeout 0.5
-    call act2_day1_sayo from _call_act2_day1_sayo
+    call sayo_route from _call_sayo_route
     return
 
 label act1_day2_nosayo:
     if persistent.sayori_dead == 1:
         play music t9
-        w "Hey, [player]."
+        w "Hey, [currentuser]."
         w "I tried to get in the VM to enact revenge on you."
         w "But, I accidentally broke a ton of things here, and these manifested as me killing Sayori."
         w "I've had an epiphany, and I realised that I can't just destroy VM3 like that."
@@ -758,9 +818,11 @@ label act1_day2_nosayo:
             "Do I forgive Wallace for what he did?"
             "Yes":
                 w "Thank you."
+                $ console_history = []
                 $ run_input(input="renpy.addPermission(\"Wallace\")", output="Added Permissions for Wallace.")
                 $ run_input(input="renpy.createchr(\"Sayori\")", output="Created Sayori.")
                 $ run_input(input="renpy.debug(\"*.*\")", output="Fixed all bugs.")
+                hide screen console_screen
                 w "I'm going to try setting the variables properly again."
                 w "Did you approach Sayori?"
                 menu:
@@ -770,7 +832,7 @@ label act1_day2_nosayo:
                         w "Alright."
                         w "Final question: Did you become American?"
                         menu:
-                            "Did I turn into an american?"
+                            "Did I turn into an American?"
                             "Yes":
                                 $ persistent.america = 1
                                 w "Alright."
@@ -785,11 +847,12 @@ label act1_day2_nosayo:
                         w "Alright."
                         w "I'll send you off."
                         call act1_day2_school from _call_act1_day2_school
-            "No (Not Done)":
+            "No":
                 w "I'm no longer able to change anything..."
                 w "You're ending the VM as I speak, and potentially the real world too."
                 w "I hope you're happy with this outcome."
-                "Broken Masquerade Ending"
+                "Broken Ending"
+                "This isn't actually an ending, but I've stopped this route here for now."
     else:
         call act1_day2_school from _call_act1_day2_school_1
     return
@@ -813,6 +876,7 @@ label act1_day2_school:
     with wipeleft
     play music t5
     scene bg kitchen
+    with wipeleft
     mc "That was a great breakfast!"
     mc "I'll head off to school now, to see what other things will happen."
     scene black
@@ -824,7 +888,7 @@ label act1_day2_school:
     mc "I hope they're doing okay."
     play music t7
     show natsuki t42 zorder 1 at f11:
-        yalign 0.6
+        yalign 0.4
     mc "Wait, who are these students here...?"
     mc "And why aren't they at school?"
     menu:
@@ -837,10 +901,12 @@ label act1_day2_school:
         "Purple haired girl (Not Done)":
             mc "I'll talk with the purple haired girl."
             mc "I have to skip class though... I hope the teacher doesn't mind."
-            call act1_day2_yuri
+            call act1_day2_yuri from _call_act1_day2_yuri
     scene black
     with wipeleft
-    "This is where the demo ends. We're around 1-2\% done with the mod, so sit tight as the mod develops further!"
+    "This is where this route ends in the demo."
+    "We're around 1-2\% done with the mod, so sit tight as the mod develops further!"
+    "These routes wont be finished for a while. These are alternate timelines where Sayori isn't your childhood friend."
     return
 
 label act1_day2_yuri:
@@ -852,5 +918,4 @@ label act1_day2_yuri:
     mc "Hey, are you alright?"
     y "..."
     mc "It's going to be okay. I'm here for you now."
-    "This menu isn't finished."
     return

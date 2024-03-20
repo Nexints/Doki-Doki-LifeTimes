@@ -1431,6 +1431,7 @@ define x = DynamicCharacter('x_name', what_prefix='"', what_suffix='"', ctc="ctc
 define guy_1 = DynamicCharacter('guy1_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define guy_2 = DynamicCharacter('guy2_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define guy_3 = DynamicCharacter('guy3_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define rc = DynamicCharacter('rc_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
 # This variable determines whether to allow the player to dismiss pauses.
 # By default this is set by config.developer which is normally set to false
@@ -1470,6 +1471,8 @@ default persistent.lets_play = False
 
 default persistent.playername = ""
 default player = persistent.playername
+default currentuser = "Player"
+default persistent.current_user = ""
 default persistent.playthrough = 0
 default persistent.yuri_kill = 0
 default persistent.seen_eyes = None
@@ -1517,6 +1520,7 @@ default w_name = "Wallace"
 default guy1_name = "Dev 1"
 default guy2_name = "Dev 2"
 default guy3_name = "Dev 3"
+default rc_name = "RainClouds"
 
 # Poem Variables
 # This section records how much each character likes your poem in-game.

@@ -58,4 +58,5 @@ and u/SlightlySimple for resizing and cutting the (FeMC) sprites (and also makin
 Credit goes to BlueGodXD for the blond FeMC design!
 (Found here: https://www.reddit.com/r/DDLCMods/comments/x7r0xy/blonde_femc_public_sprite_pack_release/)
 
-Credit to elckarow (formerly Elckarow#8399) for the Better EMR phone design!
+Credit to elckarow (formerly Elckarow#8399) for the "Better EM:R Phone" project used in this mod!
+Found here: https://github.com/Elckarow/Better-EMR-Phone

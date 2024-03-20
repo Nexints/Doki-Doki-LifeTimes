@@ -46,33 +46,33 @@ label sayo_route_4:
     scene bg residential_day
     with wipeleft
     show sayori 1x zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "Heyy [player]!"
     show sayori 1a zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "Hey, Sayori!"
     show sayori 1q zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "You ready to walk to school together?"
     show sayori 1r zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "Sure! We've always walked together anyway, so why not?"
     show sayori 2l zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "We now share period 1 together... ehe~"
     show sayori 1k zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "No need to get worked up. We're going to be late if we don't go quickly."
     mc "Wanna race?"
     show sayori 1x zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "Sure!"
     "*[player] speeds off into the distance*"
     show sayori 4m zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "Uwoa--"
     show sayori 1l zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "I should probably catch up~"
     stop music fadeout 0.5
     scene black
@@ -82,96 +82,95 @@ label sayo_route_4:
     with wipeleft
     "It's a normal day in class..."
     show natsuki 1a zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     n "H-Hey!"
     "Nevermind."
     show natsuki 1g zorder 2 at t21:
-        yalign 0.5
+        ypos 1.23
     show sayori 1j zorder 1 at f22:
-        yalign 0.5
+        ypos 1.23
     s "I was only kidding... ehe~"
     $ n_name = "Natsuki"
     show natsuki 1f zorder 1 at f21:
-        yalign 0.5
+        ypos 1.23
     show sayori 1j zorder 2 at t22:
-        yalign 0.5
+        ypos 1.23
     n "Jeez, fine."
     show natsuki 1d zorder 1 at f21:
-        yalign 0.5
+        ypos 1.23
     show sayori 1i zorder 2 at t22:
-        yalign 0.5
-    n "But, I get to make fun of you later. Deal?"
+        ypos 1.23
+    n "I'll get you back!"
     show natsuki 1k zorder 1 at t21:
-        yalign 0.5
+        ypos 1.23
     show sayori 4n zorder 2 at t22:
-        yalign 0.5
+        ypos 1.23
     mc "Am I interrupting something here?"
     show natsuki 1k zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     show sayori zorder 2 at thide:
-        yalign 0.5
+        ypos 1.23
     hide sayori
     mc "Natsuki, why are you making fun of Sayori?"
     show natsuki 1h zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     n "How do you know my name?"
     show natsuki 1g zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "I've been listening in, but that's not important."
     show natsuki 1p zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     n "You...you perv!"
     show sayori 1p zorder 1 at f21:
-        yalign 0.5
+        ypos 1.23
     show natsuki 1s zorder 1 at t22:
-        yalign 0.5
+        ypos 1.23
     s "[player]'s not like that!"
     show sayori zorder 2 at thide:
-        yalign 0.5
+        ypos 1.23
     hide sayori
     show natsuki 1q zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     n "Are you really sure? He seems like a perv to me."
     show natsuki 1s zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "Alright, cut it out Natsuki."
-    "So this is the widely known \"Tsundere\"."
-    "I think I know why she acts like this though."
+    "I'm curious as to why she acts like this..."
     show natsuki 5g zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     n "Hmph."
     show natsuki 5g zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "The teacher's going to catch us talking amongst each other."
     show natsuki 5d zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     n "Fine, but you're still a perv!"
     show natsuki 5g zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "Can't win all your battles, can you?"
     show natsuki zorder 1 at thide:
-        yalign 0.5
+        ypos 1.23
     hide natsuki
     "Turning my focus for a second..."
     play music t5
     show sayori 1k zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "Sayori, are you alright?"
     show sayori 1x zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "Yeah, I'm fine!~"
     s "Hey, [player]?"
     show sayori 1a zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "Yeah?"
     show sayori 5a zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "Do you mind helping out with this?"
     show sayori 5c zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "Sure... I'll just need a second-"
     show sayori 4m zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     stop music
     play sound "sfx/smack.ogg"
     s "Kyaa--!"
@@ -184,7 +183,6 @@ label sayo_route_4:
     mc "I'll try to find something."
     mc "Just wait here for me, alright?"
     s "Alright..."
-    s "(I'm fine with--looking like a unicorn--)"
     stop music fadeout 0.5
     scene black
     with wipeleft
@@ -228,23 +226,23 @@ label sayo_route_4:
     play music t8 fadeout 1.0
     scene bg class_day
     show sayori 1l zorder 2 at f11:
-        yalign 0.5
+        ypos 1.23
     with dissolve_cg
     s "I'll get this checked out..."
     show sayori 1k zorder 2 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "Do you know where the nurse's office is?"
     show sayori 1l zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "Yeah."
     show sayori 1k zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "Alright. I'll see you at lunch!"
     show sayori 3r zorder 1 at f11:
-        yalign 0.5
-    s "See you then!~"
+        ypos 1.23
+    s "See you then..."
     show sayori at thide:
-        yalign 0.5
+        ypos 1.23
     hide sayori
     mc "Welp, time to focus in class..."
     mc "How didn't the teacher notice what happened?"
@@ -254,6 +252,7 @@ label sayo_route_4:
     "I've been trying to concentrate, but all I could think about was the past few months."
     "So much has happened recently, but I've "
     "I did notice that Sayori acted strangely over the past few days though."
+    "It's almost as she's been pushing me away for some reason."
     play music t2
     scene bg class_day
     with wipeleft
@@ -269,44 +268,44 @@ label sayo_route_4:
     "But, I wonder if she's here this time. I don't see her."
     mc "Is anyone here?"
     show sayori 5b zorder 1 at f41:
-        yalign 0.5
+        ypos 1.23
     s "No..."
     show sayori 5b zorder 1 at t41:
-        yalign 0.5
+        ypos 1.23
     mc "Ah, hi Sayori!"
     show sayori 4m zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "Ehh???"
     s "How did you know I was here??"
     show sayori 4n zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "You're just as predictable as I am... Do you want a cookie?"
     show sayori 1m zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "Cookies???"
     s "You almost never ask..."
     show sayori 3r zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "But sure!~"
     show sayori 1x zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "I always want cookies-"
     show sayori 1a zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     play music t7
     mc "And now you don't get it for that trick you played."
     mc "Shows how predictable you are."
     show sayori 1p zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "Ehhh?"
     s "You promised!!!"
     s "Uwaa-"
     show sayori 1p zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     play music t5
     mc "I'm only kidding. Come on, let's go!"
     show sayori 1x zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "Alright!~"
     scene black
     with wipeleft
@@ -315,23 +314,23 @@ label sayo_route_4:
     with wipeleft
     mc "...and here's your cookie, Sayori!"
     show sayori 1y zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "Thanks..."
     show sayori 1y zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "Is everything alright?"
     show sayori 4y zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "Yeah! See?"
     show sayori 1a zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "Alright then..."
     "I doubt Sayori's okay. I should try to check on her just before school leaves."
     "Bell" "*RING!*"
     mc "Welp, that's our queue to leave."
     mc "Good luck in your classes!"
     show sayori 4y zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "Alright, you too [player]!"
     stop music fadeout 0.5
     scene black
@@ -344,23 +343,23 @@ label sayo_route_4:
     scene bg class_day
     with wipeleft
     show sayori 4p zorder 1 at hf11:
-        yalign 0.5
+        ypos 1.23
     s "[player], are you there?"
     "Must've spaced out too long."
     show sayori 4p zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "Yeah, I must've spaced out for a while."
     show sayori 3x zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "Ready to walk home together?"
     show sayori 3a zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "As ready as I can be."
     show sayori 1r zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "Alright! Let's go~"
     show sayori 1r at thide:
-        yalign 0.5
+        ypos 1.23
     mc "Why do the teachers never notice me spacing out?"
     mc "That's odd... I should investigate that."
     mc "Oh well..."
@@ -372,28 +371,28 @@ label sayo_route_4:
     with wipeleft
     mc "Hey, Sayori?"
     show sayori 3x zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "Yeah?"
     show sayori 1a zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "Is there something on your mind?"
     mc "You've been as spaced out as I am most of the time."
     show sayori 4p zorder 1 at hf11:
-        yalign 0.5
+        ypos 1.23
     s "Meanie!"
     show sayori 1x zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "But there's nothing to worry about~"
     show sayori 1a zorder 1 at t11:
-        yalign 0.5
+        ypos 1.23
     mc "Alright, just let me know if you need anything, alright?"
     "Something's clearly off about Sayori. This is going to be a lot harder than I thought."
     "I should potentially check on her when she least expects."
     show sayori 4y zorder 1 at f11:
-        yalign 0.5
+        ypos 1.23
     s "Alright..."
     show sayori 4y at thide:
-        yalign 0.5
+        ypos 1.23
     hide sayori
     "Yeah, something's off with Sayori."
     menu:

@@ -86,10 +86,10 @@ label act1:
     play music t2
     mc "I should probably have my lunch here."
     show sayori 1bu zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "I noticed this person feeling down while walking to school..."
     show sayori zorder 1 at thide:
-        yalign 0.4
+        ypos 1.25
     hide sayori
     mc "but I'm overthinking again. It *should be* nothing much, as I don't know her yet."
     mc "I'll enjoy my lunch for now, and see what happens later on."
@@ -197,7 +197,7 @@ label act1_ripsayori:
     with wipeleft
     scene park_entrance
     with wipeleft
-    guy_1 "[currentuser] is pretty stupid though to leave someone like that."
+    guy_1 "[persistent.current_user] is pretty stupid though to leave someone like that."
     mc "Wait... Why is Jim here?"
     mc "I didn't code him in."
     mc "What's going on?"
@@ -263,41 +263,57 @@ label act1_sayori:
     with wipeleft
     play music t9
     show sayori 4bu zorder 2 at t11:
-        yalign 0.4
+        ypos 1.5
     mc "Hey."
+    mc "What happened?"
     show sayori 4bu zorder 2 at hf11:
-        yalign 0.4
-    s "I'm fine..."
+        ypos 1.5
+    s "Nothing happened... I'm fine..."
     show sayori 4bu zorder 2 at t11:
-        yalign 0.4
+        ypos 1.5
     mc "I don't think you are."
-    mc "Come on, let's get you outta here."
-    show sayori 1bv zorder 2 at f11:
-        yalign 0.4
+    mc "I heard you back there, and I saw what happened."
+    mc "Come on, let's get you out of here."
+    show sayori 3bv zorder 2 at f11:
+        ypos 1.5
     s "Alright..."
+    scene black
+    with wipeleft
+    scene sidewalk
+    with wipeleft
+    show sayori 1bv zorder 2 at f11:
+        ypos 1.25
+    s "Why did you decide to help me though?"
     show sayori 1bv zorder 2 at t11:
-        yalign 0.4
-    mc "Yeah."
-    mc "What's your name?"
+        ypos 1.25
+    mc "I saw you fall over, so I decided to help you get up."
+    show sayori 4bw zorder 2 at f11:
+        ypos 1.25
+    s "But you don't even know me..."
+    show sayori 1bv zorder 2 at t11:
+        ypos 1.25
+    mc "It's alright, I like helping people anyway."
+    mc "I should ask though, what's your name?"
     show sayori 3by zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     $ s_name = "Sayori"
     s "Sayori."
     show sayori 3by zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "Ah, I'm [player]."
+    mc "See, now we know each other!"
     show sayori 1bn zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     play music t7
     "Girl 1" "\"Who's this [player]?\""
     "Girl 1" "\"Why do they care so much about some idiot who fell?\""
     mc "Give me a second."
     mc "I'll go have a talk with them."
     show sayori 4bq zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "Okay!"
     show sayori 4bq zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "Take this for now."
     "I hand Sayori the extra lunch I had."
     stop music fadeout 0.5
@@ -326,27 +342,27 @@ label act1_sayori:
     scene sidewalk
     with wipeleft
     show sayori 4bt zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     if persistent.america == 0:
         "Sayori seems happy by this..."
     else:
         "Sayori seems slightly distressed... but overall decently happy."
     show sayori 1bl zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     play music t9
     s "[player], thank you for helping me."
     show sayori 1bl zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "I'm sorry for what happened back there"
     mc "By the way, are you doing okay?"
     show sayori 1bt zorder 2 at hf11:
-        yalign 0.4
+        ypos 1.25
     s "Yeah... I hope so, ehe~"
     show sayori 1bt zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "Alright. I'll head home now."
     show sayori 1bu zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     s "Alright..."
     stop music fadeout 0.5
     scene black
@@ -355,82 +371,56 @@ label act1_sayori:
     scene bg residential_day
     with wipeleft
     show sayori 4bn zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "Wait, you're still here!"
     show sayori 4bn zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "Yeah. We live really close to each other!"
     show sayori 3bl zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "Ehe~ I guess I'll be seeing you more often now!"
     show sayori 3bl zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "Alright then."
-    show sayori 1br zorder 2 at f11:
-        yalign 0.4
-    s "Oh, also..."
-    show sayori 1bq zorder 2 at t11:
-        yalign 0.4
-    play music t10
-    scene black
-    with dissolve_cg
-    scene s_cg4
-    with dissolve_cg
-    s "Thank you for helping me back there."
-    "Why is this girl hugging me? I've just met them-"
-    "Might as well go along with it."
-    mc "Any time."
-    s "I've... just never had someone do that for me."
-    "So that's why."
-    mc "Why not?"
-    mc "Look, people do care about you."
-    s "No one from school..."
     call act1_route1 from _call_act1_route1
     return
 
 label act1_route1:
-    stop music fadeout 0.5
-    scene black
-    with dissolve_cg
-    play music t2
-    scene residential_sunset
-    with dissolve_cg
     show sayori 1br zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "Welp, I guess I'll be going to my house over there-"
     show sayori 1bn zorder 2 at hf11:
-        yalign 0.4
-    s "Wait!"
+        ypos 1.25
+    s "Wait..."
     show sayori 1bm zorder 2 at f11:
-        yalign 0.4
-    s "No way! We're neighbors!!!"
+        ypos 1.25
+    s "We're neighbors!~"
     show sayori 1bm zorder 2 at t11:
-        yalign 0.4
-    mc "No need to get worked up."
-    show sayori 1bl zorder 2 at f11:
-        yalign 0.4
-    s "Ahaha~ Now I can spend more time with you!"
+        ypos 1.25
+    mc "That we are."
+    "She seems so enthusiastic about this. I'm confused as to why?"
+    mc "No need to get worked up though."
     show sayori 1bk zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "Why don't we both go home though? It's pretty late..."
     show sayori 1bd zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "Alright then..."
     show sayori 1bd zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     scene black
     with wipeleft
     scene house_night
     with wipeleft
     show sayori 1bk zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "This is where we'll depart for now."
-    mc "See you later, Sayori!"
+    mc "See you later, Sayori."
     show sayori 4ba zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "See you later [player]!"
     show sayori zorder 1 at thide:
-        yalign 0.4
+        ypos 1.25
     hide sayori
     "Welp, it's time to go."
     "This girl is way too excited about something like this... I wonder why."
@@ -453,7 +443,7 @@ label act1_route1:
 
 label act1_day2:
     $ x_name = "Nexint"
-    $ player = currentuser
+    $ player = persistent.current_user
     "Act 1. Day 2 (2012)."
     if persistent.america == 1:
         "The America Route."
@@ -511,23 +501,23 @@ label act1_day2_america:
     s "Wait up!"
     mc "I have to use this M-16 though."
     show sayori 1p zorder 2 at hf11:
-        yalign 0.4
+        ypos 1.25
     s "Hey [player]!"
     show sayori 1p zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "IT'S AMERICA TIME!"
     show sayori 1n zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "Ooo, what is it?"
     show sayori 1n zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     "*[player] fires gunshots everywhere*"
     show sayori 4r zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "Can I try too?"
     show sayori 4q zorder 2 at t11:
-        yalign 0.4
-    mc "Sure!"
+        ypos 1.25
+    mc "Give me one second."
     mc "I'll just quickly..."
     scene black
     with wipeleft
@@ -535,15 +525,15 @@ label act1_day2_america:
     play music t7
     mc "It's time to die."
     show femc 1k zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     f "I'm screwed..."
     show femc zorder 1 at thide:
-        yalign 0.4
+        ypos 1.25
     hide femc
     stop music fadeout 0.5
     "*Bang*"
     play music t2
-    mc "That girl bullying Sayori is gone."
+    mc "Just had to fufill an urge quickly."
     mc "It's time to live the AMERICAN DREAM!"
     scene black
     with wipeleft
@@ -551,31 +541,31 @@ label act1_day2_america:
     with wipeleft
     mc "I'm back!"
     show sayori 4r zorder 2 at hf11:
-        yalign 0.4
-    s "Thanks for dealing with them!"
+        ypos 1.25
+    s "You're insane..."
     show sayori 1d zorder 2 at f11:
-        yalign 0.4
-    s "Mind if I join you?"
+        ypos 1.25
+    s "But you mind if I join you?"
     show sayori 1d zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     menu:
         "Should I let Sayori join me?"
         "Yes":
             mc "I don't mind."
             show sayori 1r zorder 2 at f11:
-                yalign 0.4
+                ypos 1.25
             s "Ehe~"
             show sayori 4a zorder 2 at f11:
-                yalign 0.4
+                ypos 1.25
             s "Things are going to be great!"
             call act1_day2_sayoriamerica from _call_act1_day2_sayoriamerica
         "No":
             mc "I'd rather not..."
             show sayori 1x zorder 2 at f11:
-                yalign 0.4
+                ypos 1.25
             s "That's alright. Thanks anyway for dealing with her!"
             show sayori 1a zorder 2 at t11:
-                yalign 0.4
+                ypos 1.25
             mc "No problem."
             scene black
             with wipeleft
@@ -596,25 +586,25 @@ label act1_day2_sayoriamerica:
     with wipeleft
     play music t2
     show sayori 3x zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "Hey, [player]?"
     show sayori 1a zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "Yeah?"
     show sayori 1x zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "I just wanted to say..."
     show sayori 4m zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "Oops!"
     show sayori 4m zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     "This ended up in Sayori accidentally shooting a window."
     show sayori 4n zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "Should've known you would do this..."
     show sayori 5d zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "I'm just clumsy like that... Hmph."
     "And as such, [player] lives the all american dream with Sayori, shooting people with his M-16"
     return
@@ -625,7 +615,7 @@ label act1_day2_sayo:
     with dissolve_scene_full
     "It's a brand new day..."
     s "Hey MC!"
-    "Sayori's up already? Might as well suprise her."
+    "Sayori's up already? Might as well spook her."
     mc "I see you, Sayori."
     s "No fair... I thought you wouldn't see me."
     mc "Wait, we're going to be late!"
@@ -643,13 +633,13 @@ label act1_day2_sayo:
     scene bg house
     with wipeleft
     show sayori 4p zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "Wait!"
     show sayori 1l zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "We go to the same school, do you wanna walk together?"
     show sayori 1k zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "Alright then, but we gotta walk quickly..."
     stop music fadeout 0.5
     scene black
@@ -678,27 +668,27 @@ label act1_day2_sayoroute:
     mc "Thank goodness I packed my lunch, I'm starving!"
     s "Did you say... lunch??"
     show sayori 1p zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     "I must've talked too loudly..."
     show sayori 1p zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "Found you!"
     show sayori 1p zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "Fine... you win. I'm starving though, do you want to split my lunch?"
     mc "And why are you taking my lunch?"
     show sayori 5b zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "I'm hungry..."
     show sayori 5b zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "I'll split my lunch with you."
     mc "Just don't take everything..."
     show sayori 3a zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "Alright!"
     show sayori 1a zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     stop music fadeout 0.5
     scene black
     with wipeleft
@@ -718,16 +708,16 @@ label act1_day2_sayoroute:
     with wipeleft
     mc "I'm here!"
     show sayori 1r zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "Ready?"
     show sayori 1q zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "Let's get outta here. I wouldn't want to waste time without you!"
     show sayori 1a zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "Alright!"
     show sayori 1a at thide:
-        yalign 0.4
+        ypos 1.25
     hide sayori
     if persistent.lsayo == 0:
         mc "Sayori's so energetic... I wish I could be like her."
@@ -748,16 +738,16 @@ label act1_day2_sayoroute:
     "I never knew this world could render things like these."
     "It's almost as if... this world is my lifetime."
     show sayori 1h zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "Hey, [player]?"
     show sayori 1e zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "Yeah?"
     show sayori 1l zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "I just wanted to know... did you mean what you said earlier?"
     show sayori 1m zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     if persistent.lsayo == 1:
         "I might have to lie a lot here..."
         "But, might as well go along with it."
@@ -766,33 +756,35 @@ label act1_day2_sayoroute:
     else:
         mc "I did. I enjoy spending time with you Sayo, and I wouldn't trade the world for it."
     show sayori 1y zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "It's just... I've never had someone else say that to me."
     show sayori 1u zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "Everyone else has always used me... ehe~"
     show sayori 1u zorder 2 at t11:
-        yalign 0.4
+        ypos 1.25
     mc "It's going to be alright."
     mc "I won't use you like those jerks who did."
     if persistent.lsayo == 1:
-        "I still won't use Sayori, but I do want to distance myself a bit."
+        "I still do want to distance myself a bit."
     mc "Everything's going to be fine..."
     show sayori 1t zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "Thank you, [player] for being there with me."
     show sayori 1t zorder 2 at t11:
-        yalign 0.4
-    mc "Anything for you, Sayori."
+        ypos 1.25
+    mc "I'm just doing what I can."
+    if persistent.lsayo == 1:
+        "I am curious though..."
     mc "Wait, why weren't you at school yesterday?"
     show sayori 1l zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "I didn't feel like going yesterday..."
     show sayori 1x zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     s "Besides, I'm feeling much better now that you're here!"
     show sayori 1a zorder 2 at f11:
-        yalign 0.4
+        ypos 1.25
     if persistent.lsayo == 0:
         mc "If it makes you feel that way, I'll be there for you."
     else:
@@ -809,7 +801,7 @@ label act1_day2_sayoroute:
 label act1_day2_nosayo:
     if persistent.sayori_dead == 1:
         play music t9
-        w "Hey, [currentuser]."
+        w "Hey, [persistent.current_user]."
         w "I tried to get in the VM to enact revenge on you."
         w "But, I accidentally broke a ton of things here, and these manifested as me killing Sayori."
         w "I've had an epiphany, and I realised that I can't just destroy VM3 like that."
@@ -888,7 +880,7 @@ label act1_day2_school:
     mc "I hope they're doing okay."
     play music t7
     show natsuki t42 zorder 1 at f11:
-        yalign 0.4
+        ypos 1.25
     mc "Wait, who are these students here...?"
     mc "And why aren't they at school?"
     menu:

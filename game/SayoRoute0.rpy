@@ -11,10 +11,13 @@ label sayo_route:
     scene bg sayori_bedroom
     with wipeleft
     "I'm awoken by the sun for a brand new day."
-    "But do I really belong here?"
-    "The only one whos actually showed some sympathy towards me is [player] at school."
-    "But it's no excuse. I have to get up, [player] will get worried."
+    rc "But do you really belong here?"
+    rc "[player] doesn't care about you."
+    rc "He's not going to be there in the morning."
+    "But he's been so nice to me..."
+    "I have to get up, as [player] will get worried."
     "Besides, I have to keep my lie of being this \"cute girl\" alive."
+    rc "The facade will fall, just like you."
     play music t7
     s "Wait, I'm late???"
     "I'll have to come up with an excuse for that one."
@@ -30,10 +33,11 @@ label sayo_route:
     play music t2
     scene bg residential_day
     with wipeleft
-    "Keep the lie. Don't get [player] worried."
+    "Just don't get [player] worried."
     s "Heyy!"
     play music t7
-    "But [player] isn't here..."
+    "But [player] isn't here."
+    rc "I told you. You're nothing to him."
     s "I'll just head to school on my own..."
     stop music fadeout 0.5
     scene black
@@ -50,40 +54,42 @@ label sayo_route:
     return
 
 label sayo_route_2:
-    "I'm used to i-"
+    "I guess not-"
     mc "Sayo, are you here?"
-    "[player] shouldn't be caring though. I feel like [player] wouldn't like some dumb clumbsy girl."
+    # Implement Rainclouds
+    rc "[player] shouldn't care about you."
+    rc "You're not good enough for [player]."
+    "I'll deal with these rainclouds later."
     "I'll just go to sle-"
-    play music t7
     "*MC Bursts through the door*"
     show mainchar 1b zorder 1 at t11:
-        yalign 0.4
+        ypos 1.25
     s "Uwaa-"
     s "Heyy [player]!"
+    play music t7
     show mainchar 1i zorder 1 at f11:
-        yalign 0.4
+        ypos 1.25
     mc "Why were you here?"
     show mainchar 1b zorder 1 at t11:
-        yalign 0.4
+        ypos 1.25
     s "I just come here to think sometimes..."
     s "But everything's alright! See?~"
     "I flash a bright smile to discourage [player] from finding out."
     show mainchar 1e zorder 1 at f11:
-        yalign 0.4
+        ypos 1.25
     mc "I know something's off. Do you want to talk about it?"
     show mainchar 1s zorder 1 at f11:
-        yalign 0.4
+        ypos 1.25
     mc "It's written all over you."
     show mainchar 1s zorder 1 at t11:
-        yalign 0.4
-    "I should still try to keep the lie going."
-    "I don't want [player] to worry about someone like myself."
-    "He's so much better than me..."
+        ypos 1.25
+    rc "See? Your little lies have fallen."
+    "I'll still try to keep the lie..."
     s "I'm alright! I promise-"
-    "Now I'm just lying to the one person that actually showed sympathy for me."
-    "Why am I so useless... I can't even continue talking properly."
+    rc "Now you're just lying to the one person that showed sympathy for you."
+    "At least he doesn't have to worry."
     show mainchar 1c zorder 1 at f11:
-        yalign 0.4
+        ypos 1.25
     mc "Alright, if you say so. I'll see you at lunch!"
     mc "Just let me know if anything's wrong."
     stop music fadeout 0.5
@@ -106,27 +112,31 @@ label sayo_route_2:
     "This gives me tons of time to contemplate my feelings for [player]."
     "Do I really like [player]? It's only been a couple of days since meeting him."
     "And yet, he's the only one whos actually cared."
-    "But even still, he's way too good for me... I'm just a clumbsy girl."
+    rc "He probably cares about other people more than you."
+    "Yeah... I assumed so."
     "This is so confusing... I don't know what to feel."
     play music t8
     show mainchar 1t zorder 1 at f11:
-        yalign 0.4
+        ypos 1.25
     mc "Earth to Sayori, are you there?"
     show mainchar 1t zorder 1 at t11:
-        yalign 0.4
+        ypos 1.25
     s "I'm here! Don't worry~"
     show mainchar 1y zorder 1 at f11:
-        yalign 0.4
+        ypos 1.25
     mc "Why were you just standing there?"
     show mainchar 1t zorder 1 at t11:
-        yalign 0.4
+        ypos 1.25
     s "I'm just going to my typical lunch spot!"
     "I'm not really lying, but I'm also not telling the truth either..."
     show mainchar 1k zorder 1 at f11:
-        yalign 0.4
+        ypos 1.25
     mc "Makes sense. Do you mind if I have a look?"
-    show mainchar 1k zorder 1 at f11:
-        yalign 0.4
+    show mainchar 1k zorder 1 at t11:
+        ypos 1.25
+    rc "[player]'s just being nice. He doesn't actually care."
+    "But he's been so nice to me..."
+    rc "Because he's nice to everyone that he meets. It's pretty clear, knowing from his attitude."
     s "Ehe~ Alright!"
     stop music fadeout 0.5
     scene black
@@ -136,43 +146,53 @@ label sayo_route_2:
     with wipeleft
     s "Here it is!~"
     show mainchar 1i zorder 1 at f11:
-        yalign 0.4
+        ypos 1.25
     mc "Woah-"
     show mainchar 1c zorder 1 at f11:
-        yalign 0.4
+        ypos 1.25
     mc "Nice place you got there."
     show mainchar 1a zorder 1 at t11:
-        yalign 0.4
+        ypos 1.25
     s "It's quite cozy here!"
     s "I just like to sit here and eat with myself."
     show mainchar 1j zorder 1 at f11:
-        yalign 0.4
+        ypos 1.25
     mc "Won't that make you a little isolated?"
     show mainchar 1h zorder 1 at t11:
-        yalign 0.4
+        ypos 1.25
     s "And that's where I have to ask..."
     show mainchar 1i zorder 1 at t11:
-        yalign 0.4
+        ypos 1.25
     s "Do you wanna sit with me?"
+    rc "There's no way [player] says yes."
+    rc "He doesn't really care about you, he's just nice to everyone."
     show mainchar 1k zorder 1 at f11:
-        yalign 0.4
+        ypos 1.25
     mc "Sure, I don't mind."
     show mainchar 1f zorder 1 at f11:
-        yalign 0.4
+        ypos 1.25
     mc "I mean, I don't know where else to sit, so might as well."
     show mainchar 1d zorder 1 at t11:
-        yalign 0.4
+        ypos 1.25
+    rc "You're still nothing to him. He's just being nice because he's nice to everyone else."
+    rc "You aren't good enough for [player]."
+    "But I can still try to make him feel included..."
     s "You're always welcome to sit here! Ehe~"
     show mainchar 1c zorder 1 at f11:
-        yalign 0.4
+        ypos 1.25
     mc "Thanks, Sayo."
     scene black
     with wipeleft
     "It seems like he actually does care about me...?"
     "I'm not sure though what I feel about [player]. I've met him 2 days ago, and yet, he's been so caring towards me."
-    "Honestly, I think [player] could be the one for me. I'd like to ask him out, but I'm scared he'll deny a ditzy girl like myself."
-    "Maybe he's more into other girls... someone like Monika maybe?"
-    "She is the class star after all..."
+    rc "He doesn't care. [player]'s just nice to you because he is."
+    "Honestly, I think [player] could be the one for me. I'd like to ask him out eventually, but I'm scared he'll deny a ditzy girl like myself."
+    rc "He's more into other girls. He'd pick Monika over you any day of the week."
+    rc "She is the class star. There's no way [player] will not accept Monika."
+    "It's still worth a shot."
+    rc "I'm just saying, [player] doesn't care at all about you."
+    rc "You can try, but there's no way he accepts you."
+    rc "I'm just the voice of reason."
     # Expand more on this segment.
     call sayo_route_4 from _call_sayo_route_4
     return

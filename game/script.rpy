@@ -3,6 +3,13 @@
 # This is the main script that Ren'Py calls upon to start
 # your mod's story! 
 
+init python:
+    import os
+    currentuser = os.environ.get( 'USERNAME', 
+                os.environ.get( 'USER', 
+                os.environ.get( 'LNAME', 
+                os.environ.get( 'LOGNAME', 'Player' ))))
+
 label start:
 
     # This label configures the anticheat number for the game after Act 1.
@@ -17,6 +24,9 @@ label start:
     # This variable controls whether the player can dismiss a pause in-game.
     $ _dismiss_pause = config.developer
 
+    # Obtain current user
+    $ persistent.current_user = currentuser
+
     ## Names of the Characters
     # These variables set up the names of the characters in the game.
     # To add a character, use the following example below: 
@@ -29,7 +39,8 @@ label start:
     $ n_name = "Girl 2"
     $ y_name = "Girl 1"
     $ w_name = "Wallace"
-    $ player = currentuser
+    $ player = persistent.current_user
+    $ rc_name = "Rainclouds"
 
     # This variable controls whether the quick menu in the textbox is enabled.
     $ quick_menu = True

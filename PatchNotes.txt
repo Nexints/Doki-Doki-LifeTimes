@@ -1,3 +1,18 @@
+DDLT Patch Notes:
+
+0.2.1 "RW":
+- Massively improved other parts of Sayori's route!
+- Fixed major bug with current user name collection.
+- Finished the rewrite started in 0.2.0
+- Uploaded to main DDLT github branch, and created an actual release.
+- Fixed Patchnotes
+Notes:
+- Phone system and custom videos have been rescheduled for 0.2.2
+- Rainclouds included. Please let me know if my interpretation is wrong!
+- Stats may potentially be included.
+- Past this point, I'll be working on custom DDLT music and videos in order to suit the game's massive length. I'm also likely going to improve the story externally and work on other projects, so new releases may not come for an extended period of time.
+- I also have a lack of time to work on this mod, so new releases will be heavily delayed. I still wish to hear feedback though!
+
 0.2.0 Codename "Reworked":
 - Included patch notes inside game package
 - Rewrote the beginnning, changed beginning player name to current username, most of Sayori's route, other segments of this mod and removed the confession. (Confession will come back later, but not at the next update.)
@@ -16,13 +31,16 @@ Notes:
 - I'm still a solo developer (as of now), and while I have used other assets from various sources (found in the credits.txt document), I have done all of the scripting and writing by myself.
 - If something looks off in this mod, please don't be afraid to let me know! Constructive criticism is always appreciated, but unjustified hate isn't.
 - Next update focuses on fixing up character positions.
+
 0.1.2-dev:
 - Sayori confesses to the MC!
 - Squashed bugs related to the other routes.
+
 0.1.1:
 - Rewrote a few segments
 - Started Sayori's route!
 - Started other routes (but will happen later)
+
 0.1.0:
 - Public release!
 

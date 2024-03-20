@@ -1,0 +1,36 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/definitions/definitions.rpy", line 1474, in script
+    default persistent.current_user = currentuser
+  File "game/definitions/definitions.rpy", line 1474, in script
+    default persistent.current_user = currentuser
+  File "game/definitions/definitions.rpy", line 1474, in execute
+    default persistent.current_user = currentuser
+  File "game/definitions/definitions.rpy", line 1474, in <module>
+    default persistent.current_user = currentuser
+NameError: name 'currentuser' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/bootstrap.py", line 277, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 558, in main
+    renpy.game.context().run(node)
+  File "game/definitions/definitions.rpy", line 1474, in script
+    default persistent.current_user = currentuser
+  File "game/definitions/definitions.rpy", line 1474, in script
+    default persistent.current_user = currentuser
+  File "game/definitions/definitions.rpy", line 1474, in execute
+    default persistent.current_user = currentuser
+  File "renpy/python.py", line 1085, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/definitions/definitions.rpy", line 1474, in <module>
+    default persistent.current_user = currentuser
+NameError: name 'currentuser' is not defined
+
+Windows-10-10.0.22621 AMD64
+Ren'Py 7.5.3.22090809
+Doki Doki LifeTimes Alpha 0.2.1-RW
+Mon Mar 18 22:41:06 2024

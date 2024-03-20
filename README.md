@@ -7,7 +7,7 @@ This serves as the official Github repo for Doki Doki LifeTimes, an upcoming DDL
 - This mod does not claim to replace DDLC in any way, shape or form. This mod assumes you have played through the original game, and may contain spoilers for DDLC.
 - DDLC files are required to play this mod. You may download DDLC at https://ddlc.moe/.
 - This mod is free forever, and (currently) open source. Only my assets in this mod are free to use, and other assets are under the authors terms.
-- This mod was made possible with GanstaKingofSA's Doki Doki Mod Maker.
+- I have a lack of time to work on this mod, so new releases will be heavily delayed. I still wish to hear feedback though!
 
 # Jist:
 
@@ -39,7 +39,9 @@ This mod takes place in a post-libitina simulation, where each of the Dokis are 
 - I've open sourced this project and released what I had in order to show that mod development is ongoing. This mod is not ready for public release, and still uses plenty of placeholders.
 - Contact me if you would like to join the development team! Currently looking for artists and writers to help with mod progression.
 - *I may eventually drop development on this mod, and if I do so, you may fork this project and continue it yourself.*
+- Past this point, I'll be working on custom DDLT music and videos in order to suit the game's massive length. I'm also likely going to improve the story externally and work on other projects, so new releases may not come for an extended period of time.
 
 # Credits (Additional credits in credits.txt)
+- This mod was made possible with GanstaKingofSA's Doki Doki Mod Maker.
 - Some ideas inspired from Doki Doki True World, Doki Doki Thot Club, and others.
 - uiGalaxy helped with humorous route ideas! (American Route, Breaking Kneecaps, etc)

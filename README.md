@@ -3,7 +3,6 @@
 This serves as the official Github repo for Doki Doki LifeTimes, an upcoming DDLC mod worked on by Nexint. We're still in our early stages, so issues will be present in the mod and characters may not act like themselves. Feedback is appreciated on this actively developing mod!
 
 # Disclaimer
-- **This mod is currently being rewritten from the ground up. The generic story stays the same, the characters act the same, but the interactions make a lot more sense in this mod.**
 - This mod does not claim to replace DDLC in any way, shape or form. This mod assumes you have played through the original game, and may contain spoilers for DDLC.
 - DDLC files are required to play this mod. You may download DDLC at https://ddlc.moe/.
 - This mod is free forever, and (currently) open source. Only my assets in this mod are free to use, and other assets are under the authors terms.
